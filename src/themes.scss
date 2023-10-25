@@ -1,0 +1,6 @@
+@use "sass:map";
+@use '@angular/material' as mat;
+@import "themes/portfolio";
+
+@include mat.core();
+@include mat.all-component-themes($portfolio-theme);
