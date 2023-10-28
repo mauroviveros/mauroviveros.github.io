@@ -1,0 +1,6 @@
+@use "@angular/material" as mat;
+@use "components/navbar/navbar.component.theme.scss" as navbar;
+
+@mixin all-component-themes($theme){
+  @include navbar.theme($theme);
+}

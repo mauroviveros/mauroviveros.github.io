@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin color($config){
+  $primary: map.get($config, primary);
+  
+  core-navbar{
+    background-color: mat.get-color-from-palette($primary, 500);
+    color: mat.get-contrast-color-from-palette($primary, 500);
+  }
+}
+
+@mixin theme($theme){
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null { @include color($color-config); }
+}
