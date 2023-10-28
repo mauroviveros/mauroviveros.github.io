@@ -38,5 +38,9 @@
     "titleBar.inactiveBackground": "#24119999",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#241199"
+  "peacock.color": "#241199",
+  "conventionalCommits.scopes": [
+    "core",
+    "core.shared"
+  ]
 }
