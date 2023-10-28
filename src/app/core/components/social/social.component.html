@@ -1,0 +1,5 @@
+<ng-container *ngFor="let social of socials">
+  <a [href]="social.url" target="_blank" [matTooltip]="social.tooltip" mat-icon-button>
+    <mat-icon [svgIcon]="social.icon"></mat-icon>
+  </a>
+</ng-container>
