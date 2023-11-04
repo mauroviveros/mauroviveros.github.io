@@ -1,6 +1,12 @@
 @use "sass:map";
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
+@use "app/core/core.theme.scss" as core;
+@use "app/modules/home/home.component.theme.scss" as home;
 @import "themes/portfolio";
 
 @include mat.core();
+@include mat.typography-hierarchy($portfolio-theme);
 @include mat.all-component-themes($portfolio-theme);
+@include core.all-component-themes($portfolio-theme);
+@include home.all-component-themes($portfolio-theme);
+
