@@ -9,14 +9,25 @@ $portfolio-palette: (
     50: #000000, 100: #000000, 200: #000000, 300: #ffffff, 400: #ffffff,
     500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff,
     A100: #000000, A200: #ffffff, A400: #ffffff, A700: #ffffff,
-  ),
+  )
 );
 
 $portfolio-theme: mat.define-light-theme(
   (
     color: (
       primary: mat.define-palette($portfolio-palette),
-      accent: mat.define-palette($portfolio-palette, 400),
-    )
+      accent: mat.define-palette($portfolio-palette, 400)
+    ),
+    typography: mat.define-typography-config($font-family: "Tilt Warp")
   )
 );
+
+// @function mat-set-background($theme, $backgroundColor) {
+//   $palette-color : map-get($theme, color);
+//   $background: map-get($palette-color, background);
+//   $background: map_merge($background, (background: $backgroundColor));
+//   $palette-color: map_merge($palette-color, (background: $background));
+//   @return map_merge($theme, (color: $palette-color));
+// }
+
+// $portfolio-theme: mat-set-background($portfolio-theme, #FF0000);
