@@ -1,0 +1,29 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+}
+
+
+[data-tag]{
+  margin: 0 1rem;
+  &::before{ content: "<"attr(data-tag)">"; }
+  &::after{ content: "</"attr(data-tag)">"; }
+}
+
+[data-tag=html], [data-tag=body], [data-tag=main]{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+[data-tag=p] p{
+  width: 70%;
+  position: relative;
+  margin: auto;
+}
+
+
+h1, p{ text-align: center; }
