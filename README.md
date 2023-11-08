@@ -7,7 +7,7 @@ I'm Mauro Daniel Viveros, a passionate content creator and developer. This is my
 ## 📦 Requeriments
 
 - [NodeJS][nodejs-link] _v20.9.0_
-- [AngularCLI][angular-link] _v16.2.7_
+- [AngularCLI][angular-link] _v17.0.0_
 
 ## 🚀 Commands
 
