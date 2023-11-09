@@ -1,0 +1,14 @@
+<header>
+  <img [src]="profileURL" [alt]="fullname | titlecase" />
+  <hgroup>
+    <h3>{{ fullname | titlecase }}</h3>
+    <h4>{{ role | uppercase }}</h4>
+  </hgroup>
+</header>
+
+<mat-nav-list></mat-nav-list>
+
+<portfolio-social></portfolio-social>
+<footer>
+  COPYRIGHT © {{ copyright.year }} — <a [href]="copyright.site" target="_blank">{{ copyright.owner | uppercase }}</a>
+</footer>
