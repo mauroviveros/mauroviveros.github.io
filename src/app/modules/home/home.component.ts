@@ -1,13 +1,14 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { USER } from "src/environments/environment";
+
+import { USER } from "../../../environments/environment";
 
 @Component({
   selector: "portfolio-home",
   standalone: true,
   imports: [CommonModule],
   templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.scss"],
+  styleUrl: "./home.component.scss",
 })
 export class HomeComponent {
   readonly user = USER;
