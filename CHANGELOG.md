@@ -1,3 +1,56 @@
+# [1.0.0](https://github.com/maurodviveros/maurodviveros.github.io/compare/v0.2.2...v1.0.0) (2023-11-11)
+
+
+### Bug Fixes
+
+* :adhesive_bandage: fix html structure ([65fe165](https://github.com/maurodviveros/maurodviveros.github.io/commit/65fe1650ce8db9b2e5a81fdd79c41e295078ff86))
+* :adhesive_bandage: use titlecase pipe on menu items ([fd2f70a](https://github.com/maurodviveros/maurodviveros.github.io/commit/fd2f70adebb24aa7cf23d902d4dc9dbaaef9786f))
+* :lipstick: add flex style on every component with routerOutlet ([6ff1475](https://github.com/maurodviveros/maurodviveros.github.io/commit/6ff1475c8a9cbfa29f8e92aa6f7d8437f8065f48))
+* :lipstick: fix styles on navbarComponent ([84d406a](https://github.com/maurodviveros/maurodviveros.github.io/commit/84d406a9703c15ff892e5d0743b50d089159447e))
+* :lipstick: standard styles for routing components ([3b362c4](https://github.com/maurodviveros/maurodviveros.github.io/commit/3b362c4ed6d1ee0261f0916d55c8d109460c918a))
+* **core:** :coffin: remove [@use](https://github.com/use) on core.theme ([5b40bea](https://github.com/maurodviveros/maurodviveros.github.io/commit/5b40bea2b255f9859480ac08eeb916023973d47b))
+* **core:** :lipstick: fix styles on socialComponent ([d0fdb08](https://github.com/maurodviveros/maurodviveros.github.io/commit/d0fdb08349b212cc0eba070f7b901da1c4c113cc))
+* **core:** :lipstick: fix width on navbar ([ee9c7f1](https://github.com/maurodviveros/maurodviveros.github.io/commit/ee9c7f1ea772e192b1c95989df4c56b9e811831f))
+* **home:** :lipstick: fix important theming ([a8e3b1e](https://github.com/maurodviveros/maurodviveros.github.io/commit/a8e3b1ecbf503952aced490b877ff77a7689a4b8))
+* **shared:** :adhesive_bandage: fix shared and material modules ([75cce38](https://github.com/maurodviveros/maurodviveros.github.io/commit/75cce3842452a788efcdf8ece4567ea3b46b4419))
+
+
+### Features
+
+* :bento: add img for about ([b871acb](https://github.com/maurodviveros/maurodviveros.github.io/commit/b871acb866f62e1b6f349e7aa370eaa38856b0d8))
+* :children_crossing: add core module and core-navbar component ([b8153aa](https://github.com/maurodviveros/maurodviveros.github.io/commit/b8153aa68ca1a281fc5d1b9c9886bbd243005127))
+* :lipstick: add background-theming function ([f172915](https://github.com/maurodviveros/maurodviveros.github.io/commit/f172915f0accfca825ea88c37ee1ed916f61c23b))
+* :lipstick: add card styles for appComponent ([b07f1f6](https://github.com/maurodviveros/maurodviveros.github.io/commit/b07f1f64fba68c7e6b8857437e9b4fc2e42bfaa2))
+* :lipstick: add theming for appComponent ([7f75d19](https://github.com/maurodviveros/maurodviveros.github.io/commit/7f75d190a5b45332dd65a488818673142f6131b3))
+* :lipstick: add theming for navbar ([f2bdcfc](https://github.com/maurodviveros/maurodviveros.github.io/commit/f2bdcfcb7bf8c52609ec3683bdcefa4de1365269))
+* :lipstick: add typography on theme ([a46ad71](https://github.com/maurodviveros/maurodviveros.github.io/commit/a46ad71938aead39e391b6d7503a6f0e1a4a5ff5))
+* :lipstick: define background-color on app from [@function](https://github.com/function) ([f6c0efd](https://github.com/maurodviveros/maurodviveros.github.io/commit/f6c0efde627efda4d0a9ed4573415c4ff389054a))
+* :lipstick: load theme from core and home ([5799136](https://github.com/maurodviveros/maurodviveros.github.io/commit/57991360566e8d998a460e558330ad4855a43061))
+* :lipstick: load theme from home ([1c228b5](https://github.com/maurodviveros/maurodviveros.github.io/commit/1c228b5651e7bdb1884c4f2a4307fc67b61712ec))
+* :package: add @angular/material ([849c80e](https://github.com/maurodviveros/maurodviveros.github.io/commit/849c80ee32f3c63d8cd5f52a89ff2e8a3ed77ea6))
+* :package: update angular 17 ([08875df](https://github.com/maurodviveros/maurodviveros.github.io/commit/08875df638b6a0391b8beac3658611f9ee92a4e3))
+* :rotating_light: add eslint and fix linter ([d5293e7](https://github.com/maurodviveros/maurodviveros.github.io/commit/d5293e7689525abb4c0f67e697bd9bcdb34a63bb))
+* :sparkles: add navbarComponent ([3f090d2](https://github.com/maurodviveros/maurodviveros.github.io/commit/3f090d2bdc8153c191c3da74046cd2adb13efa60))
+* :sparkles: add navList for routes ([af871dd](https://github.com/maurodviveros/maurodviveros.github.io/commit/af871dd5f02782195085bdcfb8a04c30f8818d51))
+* :sparkles: add routing ([65a5ba3](https://github.com/maurodviveros/maurodviveros.github.io/commit/65a5ba3f5830b68e6732448dc64d4d9f1a3a74ed))
+* :sparkles: add socialComponent ([a795179](https://github.com/maurodviveros/maurodviveros.github.io/commit/a79517906909a4f82bd86b4a7bcf095e95451fca))
+* :sparkles: add standalone homeComponent ([a88a875](https://github.com/maurodviveros/maurodviveros.github.io/commit/a88a8759dce1c0f778fcc5991952d7342138eb72))
+* :sparkles: update appComponent ([e6b01fe](https://github.com/maurodviveros/maurodviveros.github.io/commit/e6b01feb3d3b34ab2a8fcdfd7e54ce629533c171))
+* :sparkles: update index.html ([a9d2f0d](https://github.com/maurodviveros/maurodviveros.github.io/commit/a9d2f0ddcc542d7f95af122bac424f605541d065))
+* :truck: add home routing ([0dd7c10](https://github.com/maurodviveros/maurodviveros.github.io/commit/0dd7c102fa1de42092f10fd1c70c3a042b490abb))
+* **about:** :lipstick: add theming for aboutComponent ([d3312be](https://github.com/maurodviveros/maurodviveros.github.io/commit/d3312bec65c70f9452fd49a4b20d630e61e29da0))
+* **about:** :sparkles: add aboutComponent ([c474f30](https://github.com/maurodviveros/maurodviveros.github.io/commit/c474f303b6d2199938222ed2c8d9e249c74500dd))
+* **about:** :truck: add routing for about ([22552af](https://github.com/maurodviveros/maurodviveros.github.io/commit/22552afcb3210663b0b59d084b19064c62275cf6))
+* **core:** :lipstick: add core theming with navbar colors ([7fcaaf6](https://github.com/maurodviveros/maurodviveros.github.io/commit/7fcaaf6b0f6ab4d565ea4f045c8e3a6b923d716f))
+* **core:** :sparkles: add coreModule ([c326fdf](https://github.com/maurodviveros/maurodviveros.github.io/commit/c326fdf536fc9c22c8d05dd8d9ea8b89cec2e3fb))
+* **core:** :sparkles: add footerComponent ([356e33d](https://github.com/maurodviveros/maurodviveros.github.io/commit/356e33d55a0e1f962a5f76c1f0b2e51e7ef9927b))
+* **core:** :sparkles: add headerComponent ([d93621f](https://github.com/maurodviveros/maurodviveros.github.io/commit/d93621ff663a477d9c853b7c9a5a0b2251ef32d7))
+* **core:** :sparkles: add navbarComponent ([cc83eb1](https://github.com/maurodviveros/maurodviveros.github.io/commit/cc83eb1661850c36a71fd948b008d6b78ab86338))
+* **core:** :sparkles: add socialComponent ([da70f4b](https://github.com/maurodviveros/maurodviveros.github.io/commit/da70f4bc147d70ae5bb9290a770478353c8929b4))
+* **core.shared:** :package: add angular material and simple icons ([8bd08af](https://github.com/maurodviveros/maurodviveros.github.io/commit/8bd08afd7199bccdcdd5366db033eb2562a121f5))
+
+
+
 ## [0.2.2](https://github.com/maurodviveros/maurodviveros.github.io/compare/v0.2.1...v0.2.2) (2023-05-15)
 
 
