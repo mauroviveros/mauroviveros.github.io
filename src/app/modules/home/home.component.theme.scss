@@ -3,10 +3,10 @@
 
 @mixin color($config){
   $primary: map.get($config, primary);
-  
+
   portfolio-home{
-    background-color: mat.get-color-from-palette($primary, 900);
-    color: mat.get-contrast-color-from-palette($primary, 900);
+    background-color: mat.get-color-from-palette($primary, 900) !important;
+    color: mat.get-contrast-color-from-palette($primary, 900) !important;
 
     [data-tag]::before, [data-tag]::after{ opacity: .4; }
   }
