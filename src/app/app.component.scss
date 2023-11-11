@@ -6,3 +6,7 @@
   margin: 2rem;
   overflow: hidden;
 }
+
+:host::ng-deep > router-outlet + *{
+  flex: 1;
+}
