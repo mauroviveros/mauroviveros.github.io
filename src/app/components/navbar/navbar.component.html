@@ -10,7 +10,7 @@
   @for (item of menu; track $index) {
   <mat-list-item [routerLink]="item.path" routerLinkActive="active" [routerLinkActiveOptions]="routerLinkActiveOptions">
     <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
-    <span matListItemTitle>{{ item.text }}</span>
+    <span matListItemTitle>{{ item.text | titlecase }}</span>
   </mat-list-item>
   }
 </mat-nav-list>
