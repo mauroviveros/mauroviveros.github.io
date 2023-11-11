@@ -1,5 +1,4 @@
-@use "@angular/material" as mat;
-@include mat.core();
+@import "../functions";
 
 $portfolio-palette: (
   50: #e5e2f3, 100: #bdb8e0, 200: #9288cc, 300: #6658b8, 400: #4535a8,
@@ -22,12 +21,4 @@ $portfolio-theme: mat.define-light-theme(
   )
 );
 
-// @function mat-set-background($theme, $backgroundColor) {
-//   $palette-color : map-get($theme, color);
-//   $background: map-get($palette-color, background);
-//   $background: map_merge($background, (background: $backgroundColor));
-//   $palette-color: map_merge($palette-color, (background: $background));
-//   @return map_merge($theme, (color: $palette-color));
-// }
-
-// $portfolio-theme: mat-set-background($portfolio-theme, #FF0000);
+$portfolio-theme: mat-set-background($portfolio-theme, 300);
