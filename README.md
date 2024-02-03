@@ -6,7 +6,7 @@ I'm Mauro Daniel Viveros, a passionate content creator and developer. This is my
 
 ## 📦 Requeriments
 
-- [NodeJS][nodejs-link] _v20.9.0_
+- [NodeJS][nodejs-link] _v20.11.0_
 - [AngularCLI][angular-link] _v17.0.0_
 
 ## 🚀 Commands
@@ -29,7 +29,7 @@ MIT © [Mauro Daniel Viveros][github-profile]
 
 [github-profile]: https://github.com/maurodviveros
 [nodejs-link]: https://nodejs.org
-[angular-link]: https://angular.io
+[angular-link]: https://angular.dev
 [eslint-link]: https://eslint.org
 [angular-badge]: https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white
 [eslint-badge]: https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white
