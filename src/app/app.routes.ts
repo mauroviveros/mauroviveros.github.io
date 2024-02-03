@@ -1,16 +1,18 @@
 import { Routes } from "@angular/router";
+import { AboutComponent } from "./modules/about/about.component";
+import { HomeComponent } from "./modules/home/home.component";
 
 export const routes: Routes = [
   {
     path: "",
-    loadComponent: () => import("./modules/home/home.component").then(m => m.HomeComponent),
+    component: HomeComponent,
     data: {
       navigation: { icon: "home", text: "home" },
     },
   },
   {
     path: "about",
-    loadComponent: () => import("./modules/about/about.component").then(m => m.AboutComponent),
+    component: AboutComponent,
     data: {
       navigation: { icon: "badge", text: "about" },
     },
