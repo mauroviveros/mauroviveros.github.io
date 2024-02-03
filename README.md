@@ -14,7 +14,7 @@ I'm Mauro Daniel Viveros, a passionate content creator and developer. This is my
 | Command                   | Action                                                  |
 | :------------------------ | :------------------------------------------------------ |
 | `npm install`             | Installs dependencies                                   |
-| `npm start`               | Starts local dev server at `localhost:4321`             |
+| `npm start`               | Starts local dev server at `http://localhost:4200/`     |
 | `npm run build`           | Build your production site to `./dist/portfolio`        |
 | `npm version <version>`   | Generates CHANGELOG `patch \| minor \| major` and push  |
 
