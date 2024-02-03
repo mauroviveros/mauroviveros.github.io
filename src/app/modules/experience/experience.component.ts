@@ -5,6 +5,6 @@ import { Component } from "@angular/core";
   standalone: true,
   imports: [],
   templateUrl: "./experience.component.html",
-  styleUrl: "./experience.component.scss",
+  styleUrls: ["../../shared/scss/layout.scss", "./experience.component.scss"],
 })
 export class ExperienceComponent {}
