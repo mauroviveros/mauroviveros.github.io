@@ -42,6 +42,7 @@
   "conventionalCommits.scopes": [
     "shared",
     "home",
-    "about"
+    "about",
+    "experience"
   ]
 }
