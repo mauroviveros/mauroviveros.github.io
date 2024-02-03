@@ -1,6 +1,7 @@
 import { Routes } from "@angular/router";
 import { AboutComponent } from "./modules/about/about.component";
 import { HomeComponent } from "./modules/home/home.component";
+import { ExperienceComponent } from "./modules/experience/experience.component";
 
 export const routes: Routes = [
   {
@@ -15,6 +16,13 @@ export const routes: Routes = [
     component: AboutComponent,
     data: {
       navigation: { icon: "badge", text: "about" },
+    },
+  },
+  {
+    path: "experience",
+    component: ExperienceComponent,
+    data: {
+      navigation: { icon: "memory", text: "experience" },
     },
   },
 ];
