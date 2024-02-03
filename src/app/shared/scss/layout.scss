@@ -1,0 +1,29 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  section{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+
+  > h2{
+    margin: 0;
+    margin-bottom: 1rem;
+    line-height: 6rem;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-offset: -.5rem;
+    padding: .5rem;
+  }
+}
