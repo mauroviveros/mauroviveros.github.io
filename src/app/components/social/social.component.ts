@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { SharedModule } from "../../shared/shared.module";
-import { SOCIALS } from "../../../environments/environment";
+
+import { CV } from "../../../environments/cv";
 
 @Component({
   selector: "portfolio-social",
@@ -10,5 +11,5 @@ import { SOCIALS } from "../../../environments/environment";
   styleUrl: "./social.component.scss",
 })
 export class SocialComponent {
-  readonly socials = SOCIALS;
+  readonly socials = CV.basics.profiles;
 }
