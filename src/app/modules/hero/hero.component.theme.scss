@@ -4,7 +4,7 @@
 @mixin color($config){
   $primary: map.get($config, primary);
 
-  portfolio-home{
+  portfolio-hero{
     background-color: mat.get-color-from-palette($primary, 900) !important;
     color: mat.get-contrast-color-from-palette($primary, 900) !important;
 
@@ -13,7 +13,7 @@
 }
 
 @mixin typography($config){
-  portfolio-home{
+  portfolio-hero{
     [data-tag]::before, [data-tag]::after{
       font-family: "La Belle Aurore";
       font-weight: bold;

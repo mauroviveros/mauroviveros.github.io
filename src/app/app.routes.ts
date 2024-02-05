@@ -1,12 +1,12 @@
 import { Routes } from "@angular/router";
 import { AboutComponent } from "./modules/about/about.component";
-import { HomeComponent } from "./modules/home/home.component";
+import { HeroComponent } from "./modules/hero/hero.component";
 import { ExperienceComponent } from "./modules/experience/experience.component";
 
 export const routes: Routes = [
   {
     path: "",
-    component: HomeComponent,
+    component: HeroComponent,
     data: {
       navigation: { icon: "home", text: "home" },
     },

@@ -41,7 +41,7 @@
   "peacock.color": "#241199",
   "conventionalCommits.scopes": [
     "shared",
-    "home",
+    "hero",
     "about",
     "experience"
   ]

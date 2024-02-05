@@ -2,7 +2,7 @@
 @use "@angular/material" as mat;
 @use "app/app.component.theme.scss" as app;
 @use "app/components/navbar/navbar.component.theme.scss" as navbar;
-@use "app/modules/home/home.component.theme.scss" as home;
+@use "app/modules/hero/hero.component.theme.scss" as hero;
 @use "app/modules/about/about.component.theme.scss" as about;
 @import "themes/portfolio";
 
@@ -11,6 +11,6 @@
 @include mat.all-component-themes($portfolio-theme);
 @include app.all-component-themes($portfolio-theme);
 @include navbar.all-component-themes($portfolio-theme);
-@include home.all-component-themes($portfolio-theme);
+@include hero.all-component-themes($portfolio-theme);
 @include about.all-component-themes($portfolio-theme);
 

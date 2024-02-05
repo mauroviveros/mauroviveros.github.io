@@ -2,12 +2,12 @@
   <div data-tag="body">
     <div data-tag="header">
       <div data-tag="h1">
-        <h1>Hi, I'm {{ user.names[0] | titlecase }}!</h1>
+        <h1>Hi, I'm {{ firstName | titlecase }}!</h1>
       </div>
     </div>
     <div data-tag="main">
       <div data-tag="p">
-        <p>I am a Developer {{ role | uppercase }} from {{ user.city | titlecase }}, {{ user.country | titlecase }}</p>
+        <p>{{ summary }}</p>
       </div>
     </div>
   </div>

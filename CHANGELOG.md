@@ -11,7 +11,7 @@
 * **core:** :coffin: remove [@use](https://github.com/use) on core.theme ([5b40bea](https://github.com/maurodviveros/maurodviveros.github.io/commit/5b40bea2b255f9859480ac08eeb916023973d47b))
 * **core:** :lipstick: fix styles on socialComponent ([d0fdb08](https://github.com/maurodviveros/maurodviveros.github.io/commit/d0fdb08349b212cc0eba070f7b901da1c4c113cc))
 * **core:** :lipstick: fix width on navbar ([ee9c7f1](https://github.com/maurodviveros/maurodviveros.github.io/commit/ee9c7f1ea772e192b1c95989df4c56b9e811831f))
-* **home:** :lipstick: fix important theming ([a8e3b1e](https://github.com/maurodviveros/maurodviveros.github.io/commit/a8e3b1ecbf503952aced490b877ff77a7689a4b8))
+* **hero:** :lipstick: fix important theming ([a8e3b1e](https://github.com/maurodviveros/maurodviveros.github.io/commit/a8e3b1ecbf503952aced490b877ff77a7689a4b8))
 * **shared:** :adhesive_bandage: fix shared and material modules ([75cce38](https://github.com/maurodviveros/maurodviveros.github.io/commit/75cce3842452a788efcdf8ece4567ea3b46b4419))
 
 
