@@ -17,6 +17,7 @@ I'm Mauro Daniel Viveros, a passionate content creator and developer. This is my
 | `npm start`               | Starts local dev server at `http://localhost:4200/`     |
 | `npm run build`           | Build your production site to `./dist/portfolio`        |
 | `npm version <version>`   | Generates CHANGELOG `patch \| minor \| major` and push  |
+| `npm run lint`            | Find lints Warnings                                     |
 
 ## 📟 Setup
 ```
