@@ -2,8 +2,15 @@ import { Component, inject } from "@angular/core";
 import { SharedModule } from "../../shared/shared.module";
 import { SocialComponent } from "../social/social.component";
 
-import { COPYRIGHT, USER } from "../../../environments/environment";
 import { Router, RouterModule } from "@angular/router";
+
+import { CV } from "../../../environments/cv";
+
+const COPYRIGHT = {
+  year: 2022,
+  owner: "Mauro Daniel Viveros",
+  site: "https://github.com/maurodviveros",
+};
 
 @Component({
   selector: "portfolio-navbar",
@@ -14,12 +21,10 @@ import { Router, RouterModule } from "@angular/router";
 })
 export class NavbarComponent {
   private readonly router = inject(Router);
-  readonly fullname = [...USER.names, ...USER.surnames].join(" ");
-  readonly role = USER.roles.join(" | ");
-  readonly profileURL = USER.profileURL;
+  readonly fullname = CV.basics.name;
+  readonly role = CV.basics.label;
+  readonly profileURL = CV.basics.image;
   readonly copyright = COPYRIGHT;
   readonly routerLinkActiveOptions = { exact: true };
-  readonly menu = this.router.config.map(route => {
-    return Object.assign({ path: route.path }, route.data ? route.data["navigation"] : {});
-  });
+  readonly menu = this.router.config.map(route => Object.assign({ path: route.path }, route.data ? route.data["navigation"] : {}));
 }
