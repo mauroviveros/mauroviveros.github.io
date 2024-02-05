@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { CV } from "../../../environments/cv";
 
 @Component({
   selector: "portfolio-experience",
@@ -7,4 +8,6 @@ import { Component } from "@angular/core";
   templateUrl: "./experience.component.html",
   styleUrls: ["../../shared/scss/layout.scss", "./experience.component.scss"],
 })
-export class ExperienceComponent {}
+export class ExperienceComponent {
+  readonly works = CV.work;
+}
