@@ -1,5 +1,5 @@
 {
-  "name": "portfolio_maurodviveros",
+  "name": "portfolio_mauroviveros",
   "description": "Portfolio WEB de Mauro Daniel Viveros",
   "author": "Mauro Daniel Viveros <maurod.viveros@gmail.com> (TRY Ubbe)",
   "version": "1.0.0",
@@ -7,7 +7,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maurodviveros/maurodviveros.github.io.git"
+    "url": "git+https://github.com/mauroviveros/mauroviveros.github.io.git"
   },
   "scripts": {
     "start": "ng serve",

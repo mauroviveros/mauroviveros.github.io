@@ -28,7 +28,7 @@ $ npm start
 ## 📜 License
 MIT © [Mauro Daniel Viveros][github-profile]
 
-[github-profile]: https://github.com/maurodviveros
+[github-profile]: https://github.com/mauroviveros
 [nodejs-link]: https://nodejs.org
 [angular-link]: https://angular.dev
 [eslint-link]: https://eslint.org

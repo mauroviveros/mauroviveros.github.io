@@ -9,7 +9,7 @@ import { CV } from "../../../environments/cv";
 const COPYRIGHT = {
   year: 2022,
   owner: "Mauro Daniel Viveros",
-  site: "https://github.com/maurodviveros",
+  site: "https://github.com/mauroviveros",
 };
 
 @Component({
