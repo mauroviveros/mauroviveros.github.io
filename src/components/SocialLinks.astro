@@ -1,0 +1,39 @@
+---
+import EmailIcon from "./icons/EmailIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import InstagramIcon from "./icons/InstagramIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+
+const socialLinks = [
+    {
+        name: "Github",
+        website: "https://github.com",
+        icon: GithubIcon,
+    },
+    {
+        name: "LinkedIn",
+        website: "https://linkedin.com",
+        icon: LinkedInIcon,
+    },
+    {
+        name: "Instagram",
+        website: "https://instagram.com",
+        icon: InstagramIcon,
+    },
+    // add mailto
+    {
+        name: "Email",
+        website: "mailto:maurod.viveros@gmail.com",
+        icon: EmailIcon,
+    },
+
+];
+---
+
+<article class="flex gap-2 justify-center">
+    {socialLinks.map(({ icon: Icon, website }) => (
+        <a href={website} target="_blank" rel="noopener noreferrer">
+            <Icon class="w-6 h-6"/>
+        </a>
+    ))}
+</article>
