@@ -31,8 +31,13 @@ const socialLinks = [
 ---
 
 <article class="flex gap-2 justify-center">
-    {socialLinks.map(({ icon: Icon, website }) => (
-        <a href={website} target="_blank" rel="noopener noreferrer">
+    {socialLinks.map(({ icon: Icon, website, name }) => (
+        <a
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Enlace a ${name}`}
+            title={`Visita mi ${name}`}>
             <Icon class="w-6 h-6"/>
         </a>
     ))}
