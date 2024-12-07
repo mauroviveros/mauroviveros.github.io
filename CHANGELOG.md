@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.1.0...v1.1.1) (2024-12-07)
+
+
+### Bug Fixes
+
+* :speech_balloon: update about me section ([8dee4e0](https://github.com/mauroviveros/mauroviveros.github.io/commit/8dee4e03b4ddc6238d58c770eff52b6f161c9cff))
+
+
+
 # [1.1.0](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.0.0...v1.1.0) (2024-12-07)
 
 
