@@ -1,3 +1,39 @@
+# [1.0.0](https://github.com/mauroviveros/mauroviveros.github.io/compare/v0.2.2...v1.0.0) (2024-12-07)
+
+
+### Bug Fixes
+
+* :adhesive_bandage: fix navbar ([832cf42](https://github.com/mauroviveros/mauroviveros.github.io/commit/832cf42ac4a1cb3fcacc13edadd4dc7d3506ece9))
+* :beers: fix ALIAS with uppercase ([0ff45bc](https://github.com/mauroviveros/mauroviveros.github.io/commit/0ff45bcb8ebf63fd529cf4098f89491c75ebcada))
+* :beers: update title ([e5e185c](https://github.com/mauroviveros/mauroviveros.github.io/commit/e5e185c395ee3de4c4396411c1b45ac68432397d))
+* :iphone: add responsive in navbar ([90deb07](https://github.com/mauroviveros/mauroviveros.github.io/commit/90deb07e408691580466a10d8fee6cd557a3f9c2))
+* :iphone: fix overflow and appComponent ([1b4c4a8](https://github.com/mauroviveros/mauroviveros.github.io/commit/1b4c4a854ff6428a4cb72dc7cdedf7dd2cac4f1b))
+* :iphone: fix responsive in navbar ([fb8e03a](https://github.com/mauroviveros/mauroviveros.github.io/commit/fb8e03a8798f80bb113895b7df4f9d4ae50b56dd))
+* :package: update dependencies ([842b976](https://github.com/mauroviveros/mauroviveros.github.io/commit/842b976132ff8477ba6960ddd8c5a268c85dba62))
+* :sparkles: add copyright info ([c7b6290](https://github.com/mauroviveros/mauroviveros.github.io/commit/c7b6290951f8a5d79ff863b371ce00e64d4afaab))
+* :sparkles: init main files ([f26fab5](https://github.com/mauroviveros/mauroviveros.github.io/commit/f26fab51ac1108d01c4af11d945397fa61e27ab1))
+* :wastebasket: clean code in iconRegistry ([d2a102d](https://github.com/mauroviveros/mauroviveros.github.io/commit/d2a102d0e3bcd8dba7f66226c4552e190ab428b2))
+
+
+### Features
+
+* :construction: add background in layout ([956d7ce](https://github.com/mauroviveros/mauroviveros.github.io/commit/956d7ce5395d82dc65799f039b9ceef38f6c1fed))
+* :heavy_plus_sign: add simpleIcons ([ff3af0c](https://github.com/mauroviveros/mauroviveros.github.io/commit/ff3af0c26014c7700f07a1cbcc57206e625d432f))
+* :iphone: add responsive design to mobile ([31efd9b](https://github.com/mauroviveros/mauroviveros.github.io/commit/31efd9b7c24955c372b63b9089c011f94384e242))
+* :lipstick: include typographies ([b379d99](https://github.com/mauroviveros/mauroviveros.github.io/commit/b379d99c2dedc1bc858051e865227765bdc9c65b))
+* :mag: improve CEO ([6846415](https://github.com/mauroviveros/mauroviveros.github.io/commit/68464150d71a9c4f4c9cf97dc0438e8595ba4b22))
+* :package: add tailwind ([403dd60](https://github.com/mauroviveros/mauroviveros.github.io/commit/403dd601f187f6ec558afef50da1693c4ff6a739))
+* :sparkles: add footer and header components ([004bead](https://github.com/mauroviveros/mauroviveros.github.io/commit/004bead00e58b117491a04dc7de2a6f0173aa3ea))
+* :sparkles: add navbarComponent and init HeroComponent ([9af79f7](https://github.com/mauroviveros/mauroviveros.github.io/commit/9af79f7f123d489d91c0b7a4ca23ecfec5807448))
+* :sparkles: add navigation component ([01993c7](https://github.com/mauroviveros/mauroviveros.github.io/commit/01993c7a61af67f54cbe9291544f1a84a9bd3cc2))
+* :sparkles: add socialLinks Component ([a73b98a](https://github.com/mauroviveros/mauroviveros.github.io/commit/a73b98a8584567ebefd6266cf8ab2148a4c8a1b0))
+* :sparkles: add titleCasePipe on navigation ([c0d9b4e](https://github.com/mauroviveros/mauroviveros.github.io/commit/c0d9b4e9006bd8a657bafa1e2325eaae9326ff15))
+* :sparkles: init appComponent ([a59e983](https://github.com/mauroviveros/mauroviveros.github.io/commit/a59e9839526d624c287f9facd1b183f996f56d62))
+* :sparkles: upgrade dynamically iconRegistry ([7ec5b2a](https://github.com/mauroviveros/mauroviveros.github.io/commit/7ec5b2a410502420f504b6426977527ad89e051f))
+* add hero section ([afe7a11](https://github.com/mauroviveros/mauroviveros.github.io/commit/afe7a1144c7bf2daf287a17a5a7663fa9072fec7))
+
+
+
 ## [0.2.2](https://github.com/maurodviveros/maurodviveros.github.io/compare/v0.2.1...v0.2.2) (2023-05-15)
 
 
