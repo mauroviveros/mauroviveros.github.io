@@ -1,3 +1,18 @@
+# [1.1.0](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.0.0...v1.1.0) (2024-12-07)
+
+
+### Bug Fixes
+
+* :children_crossing: update socialLinks websites ([af6ba4c](https://github.com/mauroviveros/mauroviveros.github.io/commit/af6ba4c76534eeb4fa4245548a0055766d6515f9))
+* fix interest and education section ([06556c5](https://github.com/mauroviveros/mauroviveros.github.io/commit/06556c5ff165387039aaa41576013ee871f6013d))
+
+
+### Features
+
+* :dizzy: add animations ([b231392](https://github.com/mauroviveros/mauroviveros.github.io/commit/b2313922cba0d97aa2e6b280fd00d9e0b91cb7b6))
+
+
+
 # [1.0.0](https://github.com/mauroviveros/mauroviveros.github.io/compare/v0.2.2...v1.0.0) (2024-12-07)
 
 
