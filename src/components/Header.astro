@@ -1,30 +1,35 @@
 ---
 import Brand from "./Brand.astro";
+import ThemeBtn from "./ThemeBtn.astro";
 ---
 
-<header class="fixed top-0 w-full h-16 z-50">
+<header id="header" class="fixed top-0 w-full h-16 z-50">
   <div class="w-full h-full mx-auto px-5 max-w-screen-md">
     <div class="relative h-full w-full">
-
-      <div class="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1 font-semibold">
-        <Brand/>
+      <div class="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1">
+        <Brand />
       </div>
 
-
       <div class="absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
-        <button
-          id="header-theme-button"
-          aria-label={`Toggle light and dark theme`}
-          class="md:flex, size-9 rounded-full p-2 items-center justify-center bg-transparent hover:bg-black/5 dark:hover:bg-white/20 stroke-current hover:stroke-black hover:dark:stroke-white border border-black/10 dark:border-white/25 transition-colors duration-300 ease-in-out"
-        >
-          <svg class="size-full block dark:hidden">
-            <use href="/ui.svg#sun"></use>
-          </svg>
-          <svg class="size-full hidden dark:block">
-            <use href="/ui.svg#moon"></use>
-          </svg>
-        </button>
+        <ThemeBtn />
       </div>
     </div>
   </div>
 </header>
+
+<style>
+  header {
+    @apply border-b;
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  header:not(.scrolled) {
+    @apply bg-transparent border-transparent;
+  }
+
+  header.scrolled {
+    @apply bg-white/75 dark:bg-black/50;
+    @apply border-black/10 dark:border-white/25;
+    @apply backdrop-blur-sm;
+  }
+</style>
