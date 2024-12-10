@@ -1,3 +1,25 @@
+# [1.2.0](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.1.1...v1.2.0) (2024-12-10)
+
+
+### Bug Fixes
+
+* :adhesive_bandage: update Hero ([6715591](https://github.com/mauroviveros/mauroviveros.github.io/commit/6715591820bef3bf03e4b18687ce096efbba5fdf))
+* :bento: update socialLinks icons ([4d47ca5](https://github.com/mauroviveros/mauroviveros.github.io/commit/4d47ca5abe1f007c66d1092ec996a6ab5ad6eb21))
+* :speech_balloon: update FontFamily ([2a8c4ae](https://github.com/mauroviveros/mauroviveros.github.io/commit/2a8c4ae822231598e7a9b2702cb185065fe73805))
+
+
+### Features
+
+* :bento: add brand ([4d60ac1](https://github.com/mauroviveros/mauroviveros.github.io/commit/4d60ac1c7efec091388d06898d8e705f36022b6c))
+* :dizzy: add background particles ([d564184](https://github.com/mauroviveros/mauroviveros.github.io/commit/d5641848b41f637ee2b526a41f7e0237f876fb8f))
+* :dizzy: add initial animation ([a95b735](https://github.com/mauroviveros/mauroviveros.github.io/commit/a95b735f0a35f36f15628762464e154f4843b2ef))
+* :lipstick: enable darkMode ([3a392cb](https://github.com/mauroviveros/mauroviveros.github.io/commit/3a392cb9863414b7b13e9a7c90d2a71d17ffa707))
+* :mag: improve CEO ([37adf11](https://github.com/mauroviveros/mauroviveros.github.io/commit/37adf1111bbb90c2bcb3a790d5fd1d94e21556c2))
+* :sparkles: add consts and types ([bb6f7bf](https://github.com/mauroviveros/mauroviveros.github.io/commit/bb6f7bfca924773023d616b3d1a47da4ca11bfe9))
+* :sparkles: add Header w/ themeSwitcher ([99ba236](https://github.com/mauroviveros/mauroviveros.github.io/commit/99ba23687ec63383bde898b1faf36135c898ef55))
+
+
+
 ## [1.1.1](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.1.0...v1.1.1) (2024-12-07)
 
 
