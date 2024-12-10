@@ -1,4 +1,5 @@
 ---
+import Header from "@components/Header.astro";
 ---
 
 <!doctype html>
@@ -11,10 +12,11 @@
     <link rel="preload" href="/fonts/atkinson/atkinson-regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/fonts/atkinson/atkinson-bold.woff" as="font" type="font/woff" crossorigin>
 
-
+    <script is:inline src="/js/theme.js"></script>
     <script is:inline src="/js/animate.js"></script>
   </head>
   <body>
+    <Header/>
     <slot/>
   </body>
 </html>
@@ -45,9 +47,11 @@
   html {
     overflow-y: scroll;
     color-scheme: light;
+    background-color: white;
   }
   html.dark {
     color-scheme: dark;
+    background-color: black;
   }
 
 
