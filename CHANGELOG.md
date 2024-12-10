@@ -1,3 +1,20 @@
+## [1.2.1](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.2.0...v1.2.1) (2024-12-10)
+
+
+### Bug Fixes
+
+* :adhesive_bandage: fix buttons in Hero ([5c636ea](https://github.com/mauroviveros/mauroviveros.github.io/commit/5c636ea1fb704c97452da8efc1e325ec1ec85f78))
+* :ambulance: fix Layout ([8b4fc9a](https://github.com/mauroviveros/mauroviveros.github.io/commit/8b4fc9a5302258a831fcc577a6fd7841ed70e0f2))
+
+
+### Features
+
+* :children_crossing: improve scroll transition ([faf2468](https://github.com/mauroviveros/mauroviveros.github.io/commit/faf2468f3e3114eff603eaaea1945af63041d603))
+* :heavy_minus_sign: remove @midudev/tailwind-animations ([82099c0](https://github.com/mauroviveros/mauroviveros.github.io/commit/82099c0113bb94f4d75ff6077ed1cac6b5d99b8c))
+* :sparkles: add Footer ([3bd2e6c](https://github.com/mauroviveros/mauroviveros.github.io/commit/3bd2e6c622d0e169b39842ed06d70fcc7aea8770))
+
+
+
 # [1.2.0](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.1.1...v1.2.0) (2024-12-10)
 
 
