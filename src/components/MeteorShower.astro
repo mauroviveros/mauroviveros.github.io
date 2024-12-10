@@ -1,0 +1,59 @@
+<div id="meteors">
+  <div class="shower ur"></div>
+  <div class="shower dr"></div>
+  <div class="shower dl"></div>
+  <div class="shower ul"></div>
+</div>
+
+<style is:global>
+  #meteors .meteor {
+    @apply animate-meteor;
+    @apply absolute top-1/2 left-1/2 w-px h-[75vh];
+    @apply bg-gradient-to-b from-white to-transparent;
+  }
+</style>
+<style>
+  #meteors .shower {
+    @apply absolute inset-0 top-0;
+    @apply left-1/2 -translate-x-1/2;
+    @apply w-screen aspect-square;
+  }
+  #meteors .shower.ur {
+    @apply rotate-45;
+  }
+  #meteors .shower.dr {
+    @apply rotate-135;
+  }
+  #meteors .shower.dl {
+    @apply rotate-225;
+  }
+  #meteors .shower.ul {
+    @apply rotate-315;
+  }
+</style>
+
+<script>
+  function createMeteor() {
+    // create a meteor
+    let meteor = document.createElement("div");
+    meteor.setAttribute("class", "meteor");
+    meteor.style.left = Math.round(Math.random() * window.innerWidth) + "px";
+    meteor.style.top = Math.round(Math.random() * window.innerHeight) + "px";
+
+    // append the meteor to a random meteor shower (direction)
+    const showers = document.querySelectorAll(".shower");
+    if (showers.length > 0) {
+      const random = Math.floor(Math.random() * showers.length);
+      const shower = showers[random];
+      shower.append(meteor);
+    }
+
+    // remove the meteor after the animation duration
+    setTimeout(() => {
+      meteor.remove();
+    }, 3500);
+  }
+
+  // Create meteors on interval on two (2) seconds
+  setInterval(createMeteor, 1500);
+</script>
