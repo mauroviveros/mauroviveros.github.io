@@ -1,43 +1,11 @@
 ---
-import EmailIcon from "./icons/EmailIcon.astro";
-import GithubIcon from "./icons/GithubIcon.astro";
-import InstagramIcon from "./icons/InstagramIcon.astro";
-import LinkedInIcon from "./icons/LinkedInIcon.astro";
-
-const socialLinks = [
-    {
-        name: "Github",
-        website: "https://github.com/mauroviveros/",
-        icon: GithubIcon,
-    },
-    {
-        name: "LinkedIn",
-        website: "https://linkedin.com/in/mauroviveros/",
-        icon: LinkedInIcon,
-    },
-    {
-        name: "Instagram",
-        website: "https://www.instagram.com/maurogontier/",
-        icon: InstagramIcon,
-    },
-    {
-        name: "Email",
-        website: "mailto:maurod.viveros@gmail.com",
-        icon: EmailIcon,
-    },
-
-];
+import { SOCIALS } from "@consts";
+import SocialLink from "./SocialLink.astro";
 ---
-
-<article class="flex gap-2 justify-center animate-fade-in">
-    {socialLinks.map(({ icon: Icon, website, name }) => (
-        <a
-            href={website}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Enlace a ${name}`}
-            title={`Visita mi ${name}`}>
-            <Icon class="w-6 h-6"/>
-        </a>
-    ))}
+<article class="flex flex-wrap gap-1 items-center justify-center mt-5">
+    {
+        SOCIALS.map((SOCIAL) => (
+          <SocialLink social={SOCIAL}/>
+        ))
+      }
 </article>
