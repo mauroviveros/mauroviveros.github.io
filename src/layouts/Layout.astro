@@ -1,4 +1,5 @@
 ---
+import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import { SITE } from "@consts";
 ---
@@ -19,12 +20,14 @@ import { SITE } from "@consts";
     <meta name="keywords" content={SITE.KEYWORDS}>
     <meta name="author" content={SITE.AUTHOR}>
 
-    <script is:inline src="/js/theme.js"></script>
     <script is:inline src="/js/animate.js"></script>
+    <script is:inline src="/js/scroll.js"></script>
+    <script is:inline src="/js/theme.js"></script>
   </head>
   <body>
     <Header/>
     <slot/>
+    <Footer/>
   </body>
 </html>
 
