@@ -10,6 +10,9 @@
 
     <link rel="preload" href="/fonts/atkinson/atkinson-regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/fonts/atkinson/atkinson-bold.woff" as="font" type="font/woff" crossorigin>
+
+
+    <script is:inline src="/js/animate.js"></script>
   </head>
   <body>
     <slot/>
@@ -45,5 +48,17 @@
   }
   html.dark {
     color-scheme: dark;
+  }
+
+
+  .animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .animate.show {
+    opacity: 1;
+    transform: translateY(0);
   }
 </style>
