@@ -4,10 +4,10 @@ Welcome to my Github Pages profile.
 ![Astro][astro-badge]
 ![TailwindCSS][tailwind-badge]
 
-## 📟 Setup
+## 📦 Requeriments
 - [NodeJS][nodejs-link] _v22.11.0_
-- [PNPM][pnpm-link] _v9.5.0_
-- [Astro][astro-link] _v5.0.2_
+- [PNPM][pnpm-link] _v9.15.0_
+- [Astro][astro-link] _v5.0.2_ (optional)
 
 ## 🧞 Commands
 | Command                    | Action                                           |
@@ -20,7 +20,7 @@ Welcome to my Github Pages profile.
 | `pnpm run astro -- --help` | Get help using the Astro CLI                     |
 
 ## 📜 License
-MIT © [Mauro Daniel Viveros][github-profile]
+MIT © [Mauro Daniel Viveros](./LICENSE)
 
 [github-profile]: https://github.com/mauroviveros
 [astro-link]: https://astro.build/
