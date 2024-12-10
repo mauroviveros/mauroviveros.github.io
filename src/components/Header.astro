@@ -1,6 +1,16 @@
+---
+import Brand from "./Brand.astro";
+---
+
 <header class="fixed top-0 w-full h-16 z-50">
   <div class="w-full h-full mx-auto px-5 max-w-screen-md">
     <div class="relative h-full w-full">
+
+      <div class="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1 font-semibold">
+        <Brand/>
+      </div>
+
+
       <div class="absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
         <button
           id="header-theme-button"
