@@ -1,3 +1,12 @@
+## [1.3.4](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.3...v1.3.4) (2025-02-01)
+
+
+### Bug Fixes
+
+* :zap: remove middleware and enable i18n ([25d2bdb](https://github.com/mauroviveros/mauroviveros.github.io/commit/25d2bdb8f574ed67597c7562656c5d3762322b39))
+
+
+
 ## [1.3.3](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.2...v1.3.3) (2025-02-01)
 
 
