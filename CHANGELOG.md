@@ -1,3 +1,12 @@
+## [1.3.3](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.2...v1.3.3) (2025-02-01)
+
+
+### Bug Fixes
+
+* :construction: disable temporal Languages ([18c6b07](https://github.com/mauroviveros/mauroviveros.github.io/commit/18c6b0702d0336fd903f56a9ff7573942253a5a5))
+
+
+
 ## [1.3.2](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.1...v1.3.2) (2025-02-01)
 
 
