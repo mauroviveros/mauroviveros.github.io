@@ -32,7 +32,7 @@ const languages = [
   </div>
 
   <div
-    class="absolute right-0 z-10 mt-1 w-56 origin-top-right rounded-md shadow-lg ring-1 border border-black/10 dark:border-white/25 ring-black/5 focus:outline-none bg-slate-50/90 dark:bg-black/90"
+    class="absolute right-0 z-10 mt-1 w-56 origin-top-right rounded-md shadow-lg ring-1 overflow-hidden border border-black/10 dark:border-white/25 ring-black/5 focus:outline-none bg-slate-50/90 dark:bg-black/90"
     style="opacity: 0;"
     role="menu"
     aria-orientation="vertical"
@@ -46,7 +46,7 @@ const languages = [
           return (
             <a
               href={`/${language.locale}`}
-              class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-black/5 dark:hover:bg-white/20"
+              class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-black/5 dark:hover:bg-white/20"
               role="menuitem"
               tabindex="-1"
               id="menu-item-0"
@@ -63,21 +63,28 @@ const languages = [
 
 <script>
   // Obtener los elementos
-  const menuButton = document.getElementById(
-    "menu-button"
-  ) as HTMLButtonElement;
+  const menuButton = document.getElementById("menu-button") as HTMLButtonElement;
   const menu = document.querySelector('[role="menu"]') as HTMLElement;
 
-  function toggleExpanded(bool: boolean) {
-    menu.style.transition = `all ${bool ? "100ms ease-out" : "75ms ease-in"}`;
-    menu.style.opacity = bool ? "1" : "0";
-    menu.style.scale = bool ? "100%" : "95%";
+  function toggleExpanded(bool: boolean, init = false) {
+    menu.hidden = init ? true : false;
+
+    setTimeout(() => {
+      menu.style.transition = `all ${bool ? "100ms ease-out" : "75ms ease-in"}`;
+      menu.style.opacity = bool ? "1" : "0";
+      menu.style.scale = bool ? "100%" : "95%";
+    }, 0);
+
+    if(bool) return menu.focus();
+    setTimeout(() => { menu.hidden = true; }, 75);
+
   }
 
   menuButton!.addEventListener("click", () => {
-    const expanded =
-      menuButton.getAttribute("aria-expanded") === "true" || false;
+    const expanded = menuButton.getAttribute("aria-expanded") === "true" || false;
     menuButton.setAttribute("aria-expanded", String(!expanded));
     toggleExpanded(!expanded);
   });
+
+  toggleExpanded(false, true);
 </script>
