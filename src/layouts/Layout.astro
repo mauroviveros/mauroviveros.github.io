@@ -1,11 +1,15 @@
 ---
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
+import { getI18n } from "@i18n";
 import { SITE } from "@consts";
+
+const { currentLocale } = Astro;
+const t = getI18n(currentLocale);
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -16,7 +20,7 @@ import { SITE } from "@consts";
     <link rel="preload" href="/fonts/atkinson/atkinson-bold.woff" as="font" type="font/woff" crossorigin>
 
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={SITE.DESCRIPTION}>
+    <meta name="description" content={t(SITE.DESCRIPTION)}>
     <meta name="keywords" content={SITE.KEYWORDS}>
     <meta name="author" content={SITE.AUTHOR}>
 
