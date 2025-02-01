@@ -1,3 +1,13 @@
+## [1.3.7](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.6...v1.3.7) (2025-02-01)
+
+
+### Bug Fixes
+
+* :bug: fix bug menu hidden ([4301e0b](https://github.com/mauroviveros/mauroviveros.github.io/commit/4301e0b9cb26c71766491c0bb78e40366a751a45))
+* :iphone: set with in language select ([95366ee](https://github.com/mauroviveros/mauroviveros.github.io/commit/95366ee0fecc8d7de8e2d33baf60798b10c6860e))
+
+
+
 ## [1.3.6](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.5...v1.3.6) (2025-02-01)
 
 
