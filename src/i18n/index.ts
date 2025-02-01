@@ -1,15 +1,15 @@
 import spanish from './es.json';
 import english from './en.json';
 
-export const LANGUAGES = {
+export const LOCALES = {
   en: english,
   es: spanish,
 };
 
-type ValidLanguages = keyof typeof LANGUAGES;
+type ValidLocales = keyof typeof LOCALES;
 type Translations = Record<string, string>;
 
-export const getI18n = (language = 'en') => {
-  let json = LANGUAGES[language as ValidLanguages] as Translations || {};
+export const getI18n = (language: string) => {
+  let json = LOCALES[language as ValidLocales] as Translations || {};
   return async (id: string) => json[id];
 }
