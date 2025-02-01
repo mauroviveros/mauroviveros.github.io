@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.0...v1.3.1) (2025-02-01)
+
+
+### Bug Fixes
+
+* :globe_with_meridians: remove navigator in middleware ([25d0554](https://github.com/mauroviveros/mauroviveros.github.io/commit/25d05540aaf4a6e279da430eda32529bafd46f94))
+
+
+
 # [1.3.0](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.2.2...v1.3.0) (2025-02-01)
 
 
