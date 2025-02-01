@@ -1,3 +1,12 @@
+## [1.3.2](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.1...v1.3.2) (2025-02-01)
+
+
+### Bug Fixes
+
+* :bug: add index page ([a900cce](https://github.com/mauroviveros/mauroviveros.github.io/commit/a900ccee05c2218fe392bf8d267cf2474d7f3909))
+
+
+
 ## [1.3.1](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.0...v1.3.1) (2025-02-01)
 
 
