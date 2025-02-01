@@ -9,6 +9,7 @@
       "@consts": ["./consts/index.ts"],
       "@layouts/*": ["./layouts/*"],
       "@types": ["./types"],
+      "@i18n": ["./i18n"],
     }
   }
 }
