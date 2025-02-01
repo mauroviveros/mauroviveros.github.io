@@ -10,9 +10,6 @@ export default defineConfig({
   integrations: [tailwind()],
   i18n: {
     locales,
-    defaultLocale,
-    routing: {
-      prefixDefaultLocale: true
-    }
+    defaultLocale
   },
 });
