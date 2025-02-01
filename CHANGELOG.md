@@ -1,3 +1,27 @@
+# [1.3.0](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.2.2...v1.3.0) (2025-02-01)
+
+
+### Bug Fixes
+
+* :globe_with_meridians: fix list locales and defaultLocale ([f0cadde](https://github.com/mauroviveros/mauroviveros.github.io/commit/f0caddef28dd7350a9b59720b48a451c4dee82c7))
+* :globe_with_meridians: remove acceptLanguage onRequest ([d7dd870](https://github.com/mauroviveros/mauroviveros.github.io/commit/d7dd8704690e3c4d79a82a0638cb251e84b75185))
+
+
+### Features
+
+* :globe_with_meridians: add language select ([92be99d](https://github.com/mauroviveros/mauroviveros.github.io/commit/92be99d1ca6b684c15568f584c5ee4b78b495376))
+* :globe_with_meridians: add middleware to use browser lang as default ([67bfae3](https://github.com/mauroviveros/mauroviveros.github.io/commit/67bfae383ae3f171419bc2c91824ea9ad1c8447c))
+* :globe_with_meridians: add texts with i18n ([bd30788](https://github.com/mauroviveros/mauroviveros.github.io/commit/bd30788838973e6e5ec96bcf3d2395c3fd8ae9ab))
+* :globe_with_meridians: init i18n ([37762ca](https://github.com/mauroviveros/mauroviveros.github.io/commit/37762ca00e39c3f4a21a7a37be6b23328727bae4))
+* :globe_with_meridians: use i18n in head ([62f0c3b](https://github.com/mauroviveros/mauroviveros.github.io/commit/62f0c3b8ef88c86e0b4f725fb2cb5cc43b9a030a))
+
+
+### Performance Improvements
+
+* :globe_with_meridians: improve performance in i18n ([5c890e8](https://github.com/mauroviveros/mauroviveros.github.io/commit/5c890e886c0cf22631950d0b475ad535be626775))
+
+
+
 ## [1.2.2](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.2.1...v1.2.2) (2024-12-10)
 
 
