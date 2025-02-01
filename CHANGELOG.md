@@ -1,3 +1,12 @@
+## [1.3.8](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.7...v1.3.8) (2025-02-01)
+
+
+### Bug Fixes
+
+* :bug: fix select outclick hidden ([31d6e7e](https://github.com/mauroviveros/mauroviveros.github.io/commit/31d6e7e26c27faf9a9ef32fe0b8cdc36d6a0e396))
+
+
+
 ## [1.3.7](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.6...v1.3.7) (2025-02-01)
 
 
