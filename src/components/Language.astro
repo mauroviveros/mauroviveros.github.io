@@ -80,8 +80,9 @@ const languages = [
 
   }
 
-  menuButton!.addEventListener("click", () => {
+  document.addEventListener("click", (event) => {
     const expanded = menuButton.getAttribute("aria-expanded") === "true" || false;
+    if(!expanded && !menuButton.contains(event.target as Node)) return;
     menuButton.setAttribute("aria-expanded", String(!expanded));
     toggleExpanded(!expanded);
   });
