@@ -1,0 +1,83 @@
+---
+import Argentina from "./icons/flags/argentina.astro";
+import UnitedStates from "./icons/flags/unitedStates.astro";
+import LocalizationIcon from "./icons/LocalizationIcon.astro";
+
+const languages = [
+  {
+    locale: 'es',
+    name: "Español",
+    flag: Argentina,
+  },
+  {
+    locale: 'en',
+    name: "English",
+    flag: UnitedStates,
+  },
+];
+---
+
+
+<div class="relative inline-block text-left">
+  <div>
+    <button
+      type="button"
+      class="md:flex size-9 rounded-full p-2 items-center justify-center bg-transparent hover:bg-black/5 dark:hover:bg-white/20 stroke-current hover:stroke-black hover:dark:stroke-white border border-black/10 dark:border-white/25 transition-colors duration-300 ease-in-out"
+      id="menu-button"
+      aria-expanded="false"
+      aria-haspopup="true"
+    >
+      <LocalizationIcon/>
+    </button>
+  </div>
+
+  <div
+    class="absolute right-0 z-10 mt-1 w-56 origin-top-right rounded-md shadow-lg ring-1 border border-black/10 dark:border-white/25 ring-black/5 focus:outline-none bg-slate-50/90 dark:bg-black/90"
+    style="opacity: 0;"
+    role="menu"
+    aria-orientation="vertical"
+    aria-labelledby="menu-button"
+    tabindex="-1"
+  >
+    <div role="none">
+      {
+        languages.map((language) => {
+          const Flag = language.flag;
+          return (
+            <a
+              href={`/${language.locale}`}
+              class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-black/5 dark:hover:bg-white/20"
+              role="menuitem"
+              tabindex="-1"
+              id="menu-item-0"
+            >
+              <Flag width={24} height={24}/>
+              {language.name}
+            </a>
+          )
+        })
+      }
+    </div>
+  </div>
+</div>
+
+<script>
+  // Obtener los elementos
+  const menuButton = document.getElementById(
+    "menu-button"
+  ) as HTMLButtonElement;
+  const menu = document.querySelector('[role="menu"]') as HTMLElement;
+
+  function toggleExpanded(bool: boolean) {
+    menu.style.transition = `all ${bool ? "100ms ease-out" : "75ms ease-in"}`;
+    menu.style.opacity = bool ? "1" : "0";
+    menu.style.scale = bool ? "100%" : "95%";
+  }
+
+  menuButton!.addEventListener("click", () => {
+    const expanded =
+      menuButton.getAttribute("aria-expanded") === "true" || false;
+    menuButton.setAttribute("aria-expanded", String(!expanded));
+    toggleExpanded(!expanded);
+  });
+</script>
