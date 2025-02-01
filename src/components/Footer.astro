@@ -1,6 +1,10 @@
 ---
+import { getI18n } from "@i18n";
 import Brand from "./Brand.astro";
 import SocialLinks from "./SocialLinks.astro";
+
+const { currentLocale } = Astro;
+const t = getI18n(currentLocale);
 ---
 
 <footer class="relative bg-white dark:bg-black">
@@ -20,7 +24,7 @@ import SocialLinks from "./SocialLinks.astro";
             <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"
             ></span>
           </span>
-          All systems normal
+          {t("footer.online")}
         </div>
       </div>
     </div>
@@ -34,7 +38,7 @@ import SocialLinks from "./SocialLinks.astro";
         <div
           class="order-2 sm:order-1 flex flex-col items-center justify-center sm:items-start"
         >
-          <span class="text-sm"> &copy; 2022 | All rights reserved </span>
+          <span class="text-sm"> &copy; 2022 | {t('footer.copyright')}</span>
         </div>
 
         <div class="order-1 sm:order-2 flex justify-center sm:justify-end">

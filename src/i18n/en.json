@@ -1,3 +1,11 @@
 {
-    "test": "Hello World"
+    "test": "Hello World",
+    "hero.gretting": "Hello, I am Mauro",
+    "hero.motto": "Code brewed to perfection like a Fernet.",
+
+    "link.portfolio": "View my Portfolio",
+    "link.cv": "Download CV",
+
+    "footer.online": "All systems normal",
+    "footer.copyright": "All rights reserved"
 }

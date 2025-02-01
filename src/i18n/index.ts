@@ -11,7 +11,7 @@ export const locales = Object.keys(LOCALES);
 type ValidLocales = keyof typeof LOCALES;
 type Translations = Record<string, string>;
 
-export const getI18n = (language: string) => {
+export const getI18n = (language?: string) => {
   let json = LOCALES[language as ValidLocales] as Translations || {};
-  return (id: string) => json[id];
+  return (id: string) => json[id] || id;
 }
