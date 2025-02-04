@@ -1,13 +1,12 @@
-# Mauro Daniel Viveros ![Github Pages][github-badge]
+# Mauro Daniel Viveros [![Github Pages][github-pages-badge]][github-pages-link]
 Welcome to my Github Pages profile.
 
-![Astro][astro-badge]
-![TailwindCSS][tailwind-badge]
+[![Astro][astro-badge]][astro-link]
+[![TailwindCSS][tailwind-badge]][tailwind-link]
 
 ## 📦 Requeriments
 - [NodeJS][nodejs-link] _v22.11.0_
 - [PNPM][pnpm-link] _v9.15.0_
-- [Astro][astro-link] _v5.0.2_ (optional)
 
 ## 🧞 Commands
 | Command                    | Action                                           |
@@ -22,10 +21,12 @@ Welcome to my Github Pages profile.
 ## 📜 License
 MIT © [Mauro Daniel Viveros](./LICENSE)
 
-[github-profile]: https://github.com/mauroviveros
 [astro-link]: https://astro.build/
+[github-pages-link]: https://pages.github.com/
+[nodejs-link]: https://nodejs.org/
 [pnpm-link]: https://pnpm.io/
-[nodejs-link]: https://nodejs.org
-[github-badge]: https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white
+[tailwind-link]: https://tailwindcss.com/
+
 [astro-badge]: https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white
+[github-pages-badge]: https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white
 [tailwind-badge]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
