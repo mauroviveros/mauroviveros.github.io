@@ -1,3 +1,13 @@
+## [1.3.9](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.8...v1.3.9) (2025-02-18)
+
+
+### Features
+
+* :sparkles: add favicon ([af32375](https://github.com/mauroviveros/mauroviveros.github.io/commit/af32375b46e68e98549fb0d7ad460712736dcb48))
+* :sparkles: update links on Hero ([b9cc073](https://github.com/mauroviveros/mauroviveros.github.io/commit/b9cc0738cb5da13150c8d246ace2d96faf4e519d))
+
+
+
 ## [1.3.8](https://github.com/mauroviveros/mauroviveros.github.io/compare/v1.3.7...v1.3.8) (2025-02-01)
 
 
