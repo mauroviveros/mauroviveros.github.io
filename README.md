@@ -4,19 +4,20 @@ Welcome to my Github Pages profile.
 [![Astro][astro-badge]][astro-link]
 [![TailwindCSS][tailwind-badge]][tailwind-link]
 
-## 📦 Requeriments
+## 📦 Requirements
 - [NodeJS][nodejs-link] _v22.11.0_
 - [PNPM][pnpm-link] _v9.15.0_
 
 ## 🧞 Commands
-| Command                    | Action                                           |
-| :------------------------- | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm run build`           | Build your production site to `./dist/`          |
-| `pnpm run preview`         | Preview your build locally, before deploying     |
-| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+| Command                | Action                                                         |
+| :--------------------- | :------------------------------------------------------------- |
+| `pnpm install`         | Installs dependencies                                          |
+| `pnpm dev`             | Starts local dev server at `localhost:4321`                    |
+| `pnpm build`           | Build your production site to `./dist/`                        |
+| `pnpm preview`         | Preview your build locally, before deploying                   |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check`               |
+| `pnpm astro -- --help` | Get help using the Astro CLI                                   |
+| `pnpm version [type]`  | Bumps `[patch\|minor\|major]` version and updates CHANGELOG.md |
 
 ## 📜 License
 MIT © [Mauro Daniel Viveros](./LICENSE)
