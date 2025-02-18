@@ -7,6 +7,8 @@ import SocialLinks from "./SocialLinks.astro";
 
 const { currentLocale } = Astro;
 const t = getI18n(currentLocale)
+
+const CV_HREF = currentLocale?.toUpperCase() === 'ES' ? LINKS.CV.HREF.ES : LINKS.CV.HREF.EN;
 ---
 
 <Background/>
@@ -26,7 +28,7 @@ const t = getI18n(currentLocale)
           <p class="animated text-sm md:text-base lg:text-lg opacity-75">{t('hero.motto')}</p>
           <article class="animated flex flex-wrap gap-4 justify-center my-5">
               <a href={LINKS.PORTFOLIO.HREF} class="py-2 px-4 flex items-center rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75">{t(LINKS.PORTFOLIO.TEXT)}</a>
-              <a href={LINKS.CV.HREF} class="py-2 px-4 flex items-center truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15">{t(LINKS.CV.TEXT)}</a>
+              <a href={CV_HREF} target="_blank" class="py-2 px-4 flex items-center truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15">{t(LINKS.CV.TEXT)}</a>
           </article>
           <SocialLinks/>
       </hgroup>
