@@ -1,0 +1,20 @@
+[
+    {
+        "network": "GitHub",
+        "username": "mauroviveros",
+        "url": "https://github.com/mauroviveros/",
+        "icon": "bi:github"
+    },
+    {
+        "network": "LinkedIn",
+        "username": "mauroviveros",
+        "url": "https://linkedin.com/in/mauroviveros/",
+        "icon": "bi:linkedin"
+    },
+    {
+        "network": "Instagram",
+        "username": "maurogontier",
+        "url": "https://instagram.com/maurogontier/",
+        "icon": "bi:instagram"
+    }
+]
