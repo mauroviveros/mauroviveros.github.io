@@ -5,10 +5,9 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@components/*": ["./components/*"],
-      "@consts": ["./consts/index.ts"],
-      "@layouts/*": ["./layouts/*"],
-      "@i18n": ["./i18n"],
+      "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@styles/*": ["styles/*"],
     }
   }
 }
