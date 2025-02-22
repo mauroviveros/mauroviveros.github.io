@@ -1,17 +1,20 @@
 export const SOCIALS = [
   {
-    NAME: "Github",
-    ICON: "github",
-    HREF: "https://github.com/mauroviveros/"
+    label: "Github",
+    icon: "line-md:github",
+    href: "https://github.com/mauroviveros/",
+    color: "#333333",
   },
   {
-    NAME: "LinkedIn",
-    ICON: "linkedin",
-    HREF: "https://www.linkedin.com/in/mauroviveros/",
+    label: "LinkedIn",
+    icon: "line-md:linkedin",
+    href: "https://www.linkedin.com/in/mauroviveros/",
+    color: "#0077B5",
   },
   {
-    NAME: "Instagram",
-    ICON: "instagram",
-    HREF: "https://instagram.com/maurogontier/",
+    label: "Instagram",
+    icon: "line-md:instagram",
+    href: "https://instagram.com/maurogontier/",
+    color: "#E4405F",
   },
 ]

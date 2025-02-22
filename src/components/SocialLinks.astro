@@ -1,11 +1,16 @@
 ---
 import { SOCIALS } from "@consts";
-import SocialLink from "./SocialLink.astro";
+import { Icon } from 'astro-icon/components'
 ---
 <article class="flex flex-wrap gap-1 items-center justify-center">
-    {
-        SOCIALS.map((SOCIAL) => (
-          <SocialLink social={SOCIAL}/>
-        ))
-      }
+    {SOCIALS.map(({href, label, icon}) => (
+        <a
+            href={href}
+            target="_blank"
+            aria-label={label}
+            class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20 blend"
+        >
+            <Icon name={icon} size="1.5rem" class="group-hover:text-black group-hover:dark:text-white"/>
+        </a>
+    ))}
 </article>
