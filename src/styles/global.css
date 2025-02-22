@@ -6,3 +6,11 @@
 html {
     font-family: "Onest Variable", sans-serif;
 }
+
+body{
+    background-color: #241199;
+}
+
+body{
+    @apply flex justify-center items-center py-8;
+}

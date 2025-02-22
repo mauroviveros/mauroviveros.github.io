@@ -1,8 +1,22 @@
 ---
-import Header from "@components/Header.astro";
-import LinkTree from "@layouts/Linktree.astro";
+import Profile from "@components/Profile.astro";
+import SEO from "@components/SEO.astro";
+
+interface Props { title: string, description: string; };
+const { title, description } = Astro.props;
 ---
 
-<LinkTree title="Mauro Viveros | linkhub" description="Follow me on all my socials">
-    <Header/>
-</LinkTree>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <SEO
+        title="Mauro Viveros | linkhub"
+        description="Follow me on all my socials"
+    />
+</head>
+<body>
+    <main>
+        <Profile/>
+    </main>
+</body>
+</html>
