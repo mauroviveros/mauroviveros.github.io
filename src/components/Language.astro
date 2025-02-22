@@ -1,18 +1,16 @@
 ---
-import Argentina from "./icons/flags/argentina.astro";
-import UnitedStates from "./icons/flags/unitedStates.astro";
-import LocalizationIcon from "./icons/LocalizationIcon.astro";
+import { Icon } from "astro-icon/components";
 
 const languages = [
   {
     locale: 'es',
     name: "Español",
-    flag: Argentina,
+    flag: 'twemoji:flag-argentina',
   },
   {
     locale: 'en',
     name: "English",
-    flag: UnitedStates,
+    flag: "twemoji:flag-united-states",
   },
 ];
 ---
@@ -27,7 +25,7 @@ const languages = [
       aria-expanded="false"
       aria-haspopup="true"
     >
-      <LocalizationIcon/>
+      <Icon name="ic:outline-translate" size="1rem"/>
     </button>
   </div>
 
@@ -51,7 +49,7 @@ const languages = [
               tabindex="-1"
               id="menu-item-0"
             >
-              <Flag width={24} height={24}/>
+              <Icon name={language.flag} width={24} height={24}/>
               {language.name}
             </a>
           )
