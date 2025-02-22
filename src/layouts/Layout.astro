@@ -3,26 +3,25 @@ import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import { getI18n } from "@i18n";
 import { SITE } from "@consts";
+import SEO from "@components/SEO.astro";
 
 const { currentLocale } = Astro;
 const t = getI18n(currentLocale);
+
+interface Props { title: string, description: string; };
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang={currentLocale}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href={SITE.FAVICON} />
-    <title>{ SITE.AUTHOR }</title>
+    <SEO
+      title={title}
+      description={description}
+    />
 
     <link rel="preload" href="/fonts/atkinson/atkinson-regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/fonts/atkinson/atkinson-bold.woff" as="font" type="font/woff" crossorigin>
-
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={t(SITE.DESCRIPTION)}>
-    <meta name="keywords" content={SITE.KEYWORDS}>
-    <meta name="author" content={SITE.AUTHOR}>
 
     <script is:inline src="/js/animate.js"></script>
     <script is:inline src="/js/scroll.js"></script>
