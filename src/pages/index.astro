@@ -1,4 +1,5 @@
 ---
+import Copyright from "@components/Copyright.astro";
 import Profile from "@components/Profile.astro";
 import SEO from "@components/SEO.astro";
 
@@ -15,8 +16,8 @@ const { title, description } = Astro.props;
     />
 </head>
 <body>
-    <main>
-        <Profile/>
-    </main>
+    <Profile/>
+    <main></main>
+    <Copyright/>
 </body>
 </html>

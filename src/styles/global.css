@@ -12,5 +12,5 @@ body{
 }
 
 body{
-    @apply flex justify-center items-center py-8;
+    @apply flex flex-col gap-8 justify-center items-center py-8;
 }
