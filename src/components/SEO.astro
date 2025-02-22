@@ -1,5 +1,6 @@
 ---
 import styles from "@styles/global.css?url";
+import woff2 from '@fontsource-variable/onest/files/onest-latin-wght-normal.woff2?url';
 // import image from '../assets/mviveros-july.webp'
 
 interface Props { title: string, description: string; };
@@ -36,5 +37,7 @@ const keywords = [].join(", ");
 <!-- <meta name="apple-mobile-web-app-title" content="mviveros" /> -->
 <!-- <link rel="manifest" href="/site.webmanifest" /> -->
 
+
+<link rel="preload" as="font" type="font/woff2" href={woff2} crossorigin="anonymous" />
 <link rel="preload" href={styles} as="style">
 <link rel="stylesheet" href={styles}>

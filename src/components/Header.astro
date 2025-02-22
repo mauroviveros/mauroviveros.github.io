@@ -1,37 +1,24 @@
 ---
-import Brand from "./Brand.astro";
-import Language from "./Language.astro";
-import ThemeBtn from "./ThemeBtn.astro";
+import Networks from "./Networks.astro";
+
+const name = "Mauro Viveros";
+const role = "Web developer | DEV OPS";
+const image = "https://picsum.photos/200";
+
 ---
 
-<header id="header" class="fixed top-0 w-full h-16 z-50">
-  <div class="w-full h-full mx-auto px-5 max-w-screen-md">
-    <div class="relative h-full w-full">
-      <div class="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1">
-        <Brand />
-      </div>
+<header class="flex flex-col items-center gap-4">
+    <img
+        src={image}
+        alt="The owner of this website"
+        class="size-32 aspect-square object-cover rounded-2xl bg-white"
+        loading="lazy"
+        decoding="async"
+    >
+    <hgroup class="flex flex-col gap-2 text-center text-white">
+        <h1 class="text-4xl font-bold">{name}</h1>
+        <h2 class="text-xl">{role}</h2>
+    </hgroup>
 
-      <div class="absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
-        <ThemeBtn />
-        <Language />
-      </div>
-    </div>
-  </div>
+    <Networks/>
 </header>
-
-<style>
-  header {
-    @apply border-b;
-    @apply transition-all duration-300 ease-in-out;
-  }
-
-  header:not(.scrolled) {
-    @apply bg-transparent border-transparent;
-  }
-
-  header.scrolled {
-    @apply bg-white/75 dark:bg-black/50;
-    @apply border-black/10 dark:border-white/25;
-    @apply backdrop-blur-sm;
-  }
-</style>

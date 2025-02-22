@@ -1,1 +1,8 @@
+@import "@fontsource-variable/onest";
 @import "tailwindcss";
+
+@theme{}
+
+html {
+    font-family: "Onest Variable", sans-serif;
+}
