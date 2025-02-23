@@ -5,8 +5,18 @@ export interface Network {
     icon: string;
 }
 
-export interface Button {
+interface Button {
     url: string;
     title: string;
     icon: string;
+    feature?: false;
+    background?: string;
+    color?: string;
 }
+interface Banner extends Omit<Button, "feature" | "background"> {
+    feature: true;
+    background: string;
+}
+
+
+export type Feature = Button | Banner;

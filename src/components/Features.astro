@@ -1,23 +1,34 @@
 ---
 import { FEATURES } from '@constants';
 import { Icon } from 'astro-icon/components';
+
+const getStyle = (feature?: boolean, background?: string, color?: string) => {
+    const styles = [];
+    if(color) styles.push(`color: ${color};`);
+    if (background) {
+        if(!feature) styles.push(`background: ${background};`);
+        else styles.push(`background-image: url('${background}');`);
+    }
+
+    return styles.join(' ');
+};
 ---
 
 
-{FEATURES.map(({url, title, icon}) => (
+{FEATURES.map(({url, title, icon, feature, background, color}) => (
     <a
         href={url}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={title}
-        class="btn flex items-center gap-4 rounded-xl p-4 pt-36 text-white"
-        style="
-            background-image: url('https://githubuniverse.com/og-image-24.jpg');
-            background-size: cover;
-            background-position: center;
-        "
+        class:list={[
+            "btn flex items-center gap-4 rounded-xl p-4 bg-blackbg-cover bg-center bg-black text-white",
+            { "pt-36 bg-size": feature },
+            { "justify-center": !feature},
+        ]}
+        style={getStyle(feature, background, color)}
     >
         <Icon name={icon || 'bi:bounding-box-circles'} size="2rem"/>
-        <span class="text-xl font-medium">{title}</span>
+        <span class:list={["font-medium", feature ? "text-xl" : "text-sm"]}>{title}</span>
     </a>
 ))}

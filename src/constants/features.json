@@ -2,6 +2,14 @@
     {
         "url": "https://mauroviveros.com.ar/",
         "title": "Visit my portfolio!",
-        "icon": "bi:briefcase"
+        "icon": "bi:briefcase",
+        "feature": true
+    },
+    {
+        "url": "https://www.chess.com/member/trymviveros",
+        "title": "Play with me on chess.com",
+        "icon": "simple-icons:chessdotcom",
+        "background": "#4B4847",
+        "color": "#69923E"
     }
 ]
