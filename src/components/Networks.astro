@@ -1,24 +1,24 @@
 ---
-import { NETWORKS } from '@constants';
-import { Icon } from 'astro-icon/components';
-import type { Network } from '@interfaces';
+import { NETWORKS } from "@constants";
+import { Icon } from "astro-icon/components";
+import type { Network } from "@interfaces";
 ---
-<nav class="flex gap-4">
-    {
-        NETWORKS.map(({network, username, url, icon, classes}) => (
-            <a
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Visit ${username}'s profile on ${network}`}
-                class:list={[
-                    "flex rounded-md border p-3 text-white hover:bg-white border-slate-200",
-                    [classes ? classes : 'hover:text-black']
-                ]}
-            >
-                <Icon name={icon || 'bi:bounding-box-circles'} size="1.5rem"/>
-            </a>
-        ))
-    }
 
+<nav class="flex gap-4">
+  {
+    NETWORKS.map(({ network, username, url, icon, classes }) => (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Visit ${username}'s profile on ${network}`}
+        class:list={[
+          "flex rounded-md border p-3 text-white hover:bg-white border-slate-200",
+          [classes ? classes : "hover:text-black"],
+        ]}
+      >
+        <Icon name={icon || "bi:bounding-box-circles"} size="1.5rem" />
+      </a>
+    ))
+  }
 </nav>

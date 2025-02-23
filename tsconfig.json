@@ -9,7 +9,7 @@
       "@constants": ["constants/index.ts"],
       "@interfaces": ["interfaces/index.ts"],
       "@layouts/*": ["layouts/*"],
-      "@styles/*": ["styles/*"],
+      "@styles/*": ["styles/*"]
     }
   }
 }

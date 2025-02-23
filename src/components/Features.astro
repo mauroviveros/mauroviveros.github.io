@@ -1,34 +1,37 @@
 ---
-import { FEATURES } from '@constants';
-import { Icon } from 'astro-icon/components';
+import { FEATURES } from "@constants";
+import { Icon } from "astro-icon/components";
 
 const getStyle = (feature?: boolean, background?: string, color?: string) => {
-    const styles = [];
-    if(color) styles.push(`color: ${color};`);
-    if (background) {
-        if(!feature) styles.push(`background: ${background};`);
-        else styles.push(`background-image: url('${background}');`);
-    }
+  const styles = [];
+  if (color) styles.push(`color: ${color};`);
+  if (background) {
+    if (!feature) styles.push(`background: ${background};`);
+    else styles.push(`background-image: url('${background}');`);
+  }
 
-    return styles.join(' ');
+  return styles.join(" ");
 };
 ---
 
-
-{FEATURES.map(({url, title, icon, feature, background, color}) => (
+{
+  FEATURES.map(({ url, title, icon, feature, background, color }) => (
     <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={title}
-        class:list={[
-            "btn flex items-center gap-4 rounded-xl p-4 bg-cover bg-center bg-black text-white",
-            { "pt-36 bg-size": feature },
-            { "justify-center": !feature},
-        ]}
-        style={getStyle(feature, background, color)}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={title}
+      class:list={[
+        "btn flex items-center gap-4 rounded-xl p-4 bg-cover bg-center bg-black text-white",
+        { "pt-36 bg-size": feature },
+        { "justify-center": !feature },
+      ]}
+      style={getStyle(feature, background, color)}
     >
-        <Icon name={icon || 'bi:bounding-box-circles'} size="2rem"/>
-        <span class:list={["font-medium", feature ? "text-xl" : "text-sm"]}>{title}</span>
+      <Icon name={icon || "bi:bounding-box-circles"} size="2rem" />
+      <span class:list={["font-medium", feature ? "text-xl" : "text-sm"]}>
+        {title}
+      </span>
     </a>
-))}
+  ))
+}
