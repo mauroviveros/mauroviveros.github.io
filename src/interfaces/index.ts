@@ -3,6 +3,7 @@ export interface Network {
     username: string;
     url: string;
     icon: string;
+    classes?: string;
 }
 
 interface Button {
