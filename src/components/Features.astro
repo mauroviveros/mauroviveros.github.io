@@ -1,0 +1,23 @@
+---
+import { FEATURES } from '@constants';
+import { Icon } from 'astro-icon/components';
+---
+
+
+{FEATURES.map(({url, title, icon}) => (
+    <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={title}
+        class="btn flex items-center gap-4 rounded-xl p-4 pt-36 text-white"
+        style="
+            background-image: url('https://githubuniverse.com/og-image-24.jpg');
+            background-size: cover;
+            background-position: center;
+        "
+    >
+        <Icon name={icon || 'bi:bounding-box-circles'} size="2rem"/>
+        <span class="text-xl font-medium">{title}</span>
+    </a>
+))}

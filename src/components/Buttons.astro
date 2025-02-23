@@ -1,0 +1,16 @@
+---
+import { BUTTONS } from '@constants';
+import { Icon } from 'astro-icon/components';
+---
+{BUTTONS.map(({url, title, icon}) => (
+    <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={title}
+        class="btn flex items-center gap-4 rounded-xl p-4 bg-black text-white justify-center"
+    >
+        <Icon name={icon} size="2rem"/>
+        <span>{title}</span>
+    </a>
+))}
