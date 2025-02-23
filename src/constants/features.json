@@ -3,7 +3,7 @@
         "url": "https://mauroviveros.com.ar/",
         "title": "Visit my portfolio!",
         "icon": "bi:briefcase",
-        "background": "https://githubuniverse.com/og-image-24.jpg",
+        "background": "/features/portfolio.webp",
         "feature": true
     },
     {
