@@ -1,14 +1,26 @@
-# Mauro Daniel Viveros [![Github Pages][github-pages-badge]][github-pages-link]
+<div align="center">
 
-Welcome to my Github Pages profile.
+![Banner](https://drive.google.com/thumbnail?id=1XMUUBRD_NQ0VEIe1dlDxbjh7XB57b7VW&sz=w960)
+
+# [Mauro’s Link Hub](https://mauroviveros.github.io/)
+
+Welcome to my personal link hub! Here you can find quick access to all my networks, profiles, and important links in one place.
+
+
+![GitHub last commit](https://img.shields.io/github/last-commit/mauroviveros/mauroviveros.github.io?logo=git)
+![GitHub License](https://img.shields.io/github/license/mauroviveros/mauroviveros.github.io?logo=github)
+![GitHub Repo stars](https://img.shields.io/github/stars/mauroviveros/mauroviveros.github.io)
+![GitHub watchers](https://img.shields.io/github/watchers/mauroviveros/mauroviveros.github.io)
 
 [![Astro][astro-badge]][astro-link]
 [![TailwindCSS][tailwind-badge]][tailwind-link]
+![Github Pages][github-pages-badge]
+</div>
 
 ## 📦 Requirements
 
-- [NodeJS][nodejs-link] _v22.11.0_
-- [PNPM][pnpm-link] _v9.15.0_
+- [NodeJS][nodejs-link] _v22.14.0_
+- [PNPM][pnpm-link] _v10.5.2_
 
 ## 🧞 Commands
 
