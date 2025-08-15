@@ -21,7 +21,7 @@
   "dependencies": {
     "@fontsource-variable/onest": "^5.2.5",
     "@tailwindcss/vite": "^4.0.9",
-    "astro": "^5.4.2",
+    "astro": "^5.12.8",
     "astro-icon": "^1.1.5",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
