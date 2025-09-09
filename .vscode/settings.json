@@ -1,29 +1,29 @@
 {
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "astro", // Enable .astro
-    "typescript", // Enable .ts
-    "typescriptreact" // Enable .tsx
-  ],
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#4d4d4d",
-    "activityBar.background": "#4d4d4d",
+    "activityBar.activeBackground": "#3a424b",
+    "activityBar.background": "#3a424b",
     "activityBar.foreground": "#e7e7e7",
     "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#308f30",
+    "activityBarBadge.background": "#bf407c",
     "activityBarBadge.foreground": "#e7e7e7",
     "commandCenter.border": "#e7e7e799",
-    "sash.hoverBorder": "#4d4d4d",
-    "statusBar.background": "#333333",
+    "sash.hoverBorder": "#3a424b",
+    "statusBar.background": "#24292e",
     "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#4d4d4d",
-    "statusBarItem.remoteBackground": "#333333",
+    "statusBarItem.hoverBackground": "#3a424b",
+    "statusBarItem.remoteBackground": "#24292e",
     "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#333333",
+    "titleBar.activeBackground": "#24292e",
     "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#33333399",
+    "titleBar.inactiveBackground": "#24292e99",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#333333"
+  "peacock.color": "#24292e"
 }

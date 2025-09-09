@@ -1,0 +1,24 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+export interface Props extends HTMLAttributes<'section'> {}
+const { class: className = '' } = Astro.props;
+---
+
+<section class=`bg-card text-on-card flex flex-col rounded-2xl border p-6 gap-4 ${className}`>
+  <slot />
+</section>
+<!-- text-card-foreground
+flex
+flex-col
+gap-6
+md:col-span-2
+lg:col-span-2
+md:row-span-2
+p-6
+bg-card
+border
+border-border
+relative
+overflow-hidden
+rounded-2xl
+shadow-none -->

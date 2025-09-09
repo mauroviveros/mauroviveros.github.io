@@ -19,8 +19,8 @@ Welcome to my personal link hub! Here you can find quick access to all my networ
 
 ## 📦 Requirements
 
-- [NodeJS][nodejs-link] _v22.14.0_
-- [PNPM][pnpm-link] _v10.5.2_
+- [NodeJS][nodejs-link] _v22.19.0_
+- [PNPM][pnpm-link] _v10.15.1_
 
 ## 🧞 Commands
 

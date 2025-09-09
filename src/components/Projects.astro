@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon/components';
+import Card from './ui/Card.astro';
+---
+
+<Card class="col-span-2 row-span-2">
+  <h3 class="font-semibold">Projects</h3>
+
+  <ul class="flex flex-col gap-4">
+    <li class="flex items-start justify-between">
+      <div class="flex flex-1 flex-col gap-1">
+        <h4 class="font-semibold">E-Commerce Platform</h4>
+        <p class="text-muted text-sm">
+          Modern e-commerce platform with React, Node.js, and PostgreSQL featuring payment
+          processing and real-time inventory.
+        </p>
+        <div class="flex flex-wrap gap-1">
+          <!-- inline-flex items-center justify-center border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground text-xs font-sans rounded-full -->
+          <span
+            class="inline-flex items-center justify-center rounded-full border px-2 py-0.5 text-xs font-medium"
+          >
+            React
+          </span>
+          <span
+            class="inline-flex items-center justify-center rounded-full border px-2 py-0.5 text-xs font-medium"
+          >
+            Node.js
+          </span>
+          <span
+            class="inline-flex items-center justify-center rounded-full border px-2 py-0.5 text-xs font-medium"
+          >
+            PostgreSQL
+          </span>
+        </div>
+      </div>
+
+      <a href="#">
+        <Icon name="lucide:external-link" />
+      </a>
+    </li>
+  </ul>
+</Card>

@@ -1,23 +1,29 @@
 ---
-import Copyright from "@components/Copyright.astro";
-import Features from "@components/Features.astro";
-import Profile from "@components/Profile.astro";
-import SEO from "@components/SEO.astro";
+import styles from './../styles/global.css?url';
+import About from '../components/About.astro';
+import Connect from '../components/Connect.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Availability from '../components/Availability.astro';
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
-    <SEO
-      title="Mauro Viveros | linkhub"
-      description="Follow me on all my socials"
-    />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preload" href={styles} as="style" />
+    <link rel="stylesheet" href={styles} />
+    <title>Astro</title>
   </head>
-  <body>
-    <Profile />
-    <main class="flex flex-col w-full gap-6">
-      <Features />
+  <body class="flex min-h-dvh flex-col p-4">
+    <main class="grid flex-1 grid-cols-5 gap-6">
+      <About />
+      <Experience />
+      <Availability />
+      <Connect />
+      <Projects />
     </main>
-    <Copyright />
   </body>
 </html>

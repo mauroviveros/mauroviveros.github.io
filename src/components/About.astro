@@ -1,0 +1,37 @@
+---
+import Avatar from './ui/Avatar.astro';
+import Card from './ui/Card.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<Card class="col-span-2 row-span-3">
+  <div class="flex items-center gap-4">
+    <Avatar initials="MV" class="size-16" />
+    <hgroup>
+      <h2 class="text-xl font-bold">About me</h2>
+      <div class="text-muted flex items-center gap-2 text-sm">
+        <Icon name="lucide:map-pin" />
+        <span>Argentina</span>
+      </div>
+    </hgroup>
+  </div>
+
+  <p class="flex-1 text-sm leading-relaxed text-balance">
+    I'm Mauro Viveros, a passionate Frontend developer from the Argentina with 5 years of experience
+    building scalable web applications and custom CMS solutions. I specialize in HubSpot
+    development, creating seamless user experiences and optimizing content management workflows.
+    When I'm not coding, you'll find me exploring new web technologies and contributing to the
+    developer community.
+  </p>
+
+  <div class="flex flex-wrap gap-1">
+    <!-- inline-flex items-center justify-center border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90 font-sans text-xs rounded-full -->
+    {
+      [0, 1, 2, 3].map(() => (
+        <span class="inline-flex w-fit shrink-0 items-center justify-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium whitespace-nowrap">
+          Node.js
+        </span>
+      ))
+    }
+  </div>
+</Card>

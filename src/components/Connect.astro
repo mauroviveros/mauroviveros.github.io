@@ -1,0 +1,24 @@
+---
+import Card from './ui/Card.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<Card class="col-span-1 row-span-2">
+  <h3 class="font-semibold">Connect</h3>
+
+  <ul class="flex flex-col gap-4">
+    {
+      [0, 1, 3].map(() => (
+        <li>
+          <a
+            href="#"
+            class="hover:text-primary flex items-center gap-3 transition-all duration-200 hover:translate-x-1 hover:underline"
+          >
+            <Icon name="lucide:github" size="1rem" />
+            <span class="text-sm">Github</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Card>

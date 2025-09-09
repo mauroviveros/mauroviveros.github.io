@@ -1,11 +1,7 @@
 {
   "name": "mauroviveros.github.io",
-  "description": "Personal Linktree | Github Pages",
-  "author": {
-    "name": "Mauro Daniel Viveros",
-    "email": "maurod.viveros@gmail.com",
-    "url": "https://mauroviveros.com.ar/"
-  },
+  "description": "mauroviveros | Github Pages",
+  "author": "Mauro Daniel Viveros <maurod.viveros@gmail.com> (TRY Ubbe)",
   "license": "MIT",
   "repository": "github:mauroviveros/mauroviveros.github.io",
   "private": true,
@@ -15,25 +11,24 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint",
-    "format": "prettier"
+    "lint": "eslint"
   },
   "dependencies": {
-    "@fontsource-variable/onest": "^5.2.5",
-    "@tailwindcss/vite": "^4.0.9",
-    "astro": "^5.13.1",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.13.7",
     "astro-icon": "^1.1.5",
-    "autoprefixer": "^10.4.20",
-    "cssnano": "^7.0.6",
-    "tailwindcss": "^4.0.9"
+    "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
-    "@iconify-json/bi": "^1.2.2",
-    "@iconify-json/simple-icons": "^1.2.27",
-    "@typescript-eslint/parser": "^8.26.0",
-    "eslint": "^9.21.0",
+    "@iconify-json/lucide": "^1.2.66",
+    "@typescript-eslint/parser": "^8.43.0",
+    "astro-eslint-parser": "^1.2.2",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.3.1",
-    "prettier": "^3.5.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.14"
   }
 }
