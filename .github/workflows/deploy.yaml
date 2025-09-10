@@ -18,7 +18,7 @@ jobs:
 
       - name: Build Astro Compile
         env:
-          API_GITHUB_TOKEN: ${{ vars.API_GITHUB_TOKEN }}
+          PUBLIC_GITHUB_API_TOKEN: ${{ vars.PUBLIC_GITHUB_API_TOKEN }}
         run: npm run build
 
       - name: Archive Build

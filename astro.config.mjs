@@ -11,7 +11,7 @@ export default defineConfig({
   },
   env: {
     schema: {
-      API_GITHUB_TOKEN: envField.string({ context: 'server', access: 'secret' }),
+      PUBLIC_GITHUB_API_TOKEN: envField.string({ context: 'server', access: 'secret' }),
     },
   },
 });
