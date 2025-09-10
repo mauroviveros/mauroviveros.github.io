@@ -23,6 +23,7 @@ import { Icon } from 'astro-icon/components';
         class:list={[
           'inline-flex size-9 items-center justify-center rounded-full border text-sm font-medium shadow-xs',
           'hover:bg-primary/10',
+          'opacity-0',
         ]}
       >
         <Icon name="lucide:sun-moon" class="size-5" />
@@ -35,10 +36,10 @@ import { Icon } from 'astro-icon/components';
       <Connect />
       <Projects />
     </main>
-    <footer class="container mx-auto text-center">
+    <footer class="container mx-auto text-center md:text-left">
       <p class="text-muted text-sm leading-9">
         Built with ❤️ • © 2025 Mauro Viveros
-        <span class="float-right">hola</span>
+        <span class="float-right">Last updated: {new Date().toLocaleDateString()}</span>
       </p>
     </footer>
   </body>
