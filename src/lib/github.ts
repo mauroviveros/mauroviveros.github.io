@@ -1,4 +1,3 @@
-import { site } from "astro:config/server";
 import { API_GITHUB_TOKEN } from "astro:env/server";
 const API_URL = 'https://api.github.com/users/mauroviveros';
 
@@ -29,10 +28,7 @@ export const getRepos = async () => {
     .filter(repo => !repo.private)
     .filter(({ fork }) => !fork)
     .filter(({ topics }) => !topics.includes('github-profile'))
-    .filter(({ homepage }) => {
-      if(!homepage || !site) return true;
-      return new URL(homepage).href !== new URL(site).href;
-    });
+    .filter(({ topics }) => !topics.includes('github-pages'))
 }
 
 export const getUser = async () => {
