@@ -13,22 +13,17 @@ interface User {
   readonly created_at: string;
 }
 
-export const getRepos = async () => {
-  const response = await fetch('https://api.github.com/users/mauroviveros/repos?sort=created', {
-    headers: {
-      Authorization: `Bearer ${API_GITHUB_TOKEN}`,
-    },
-  });
+const request: RequestInit = { headers: { Authorization: `Bearer ${API_GITHUB_TOKEN}` } }
 
-  return (await response.json()) as Repository[];
+export const getRepos = async () => {
+  const response = await fetch('https://api.github.com/users/mauroviveros/repos?sort=created', request);
+
+  const data = await response.json();
+  return (Array.isArray(data) ? data : []) as Repository[];
 }
 
 export const getUser = async () => {
-  const response = await fetch('https://api.github.com/users/mauroviveros', {
-    headers: {
-      Authorization: `Bearer ${API_GITHUB_TOKEN}`,
-    },
-  });
+  const response = await fetch('https://api.github.com/users/mauroviveros', request);
 
   return (await response.json()) as User;
 }
