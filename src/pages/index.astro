@@ -1,20 +1,10 @@
 ---
-import { About, Availability, Connect, Experience, Projects, ThemeToggle } from '@components';
-import styles from '@styles/global.css?url';
+import { About, Availability, Connect, Experience, Projects, SEO, ThemeToggle } from '@components';
 ---
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="alternate icon" type="image/png" href="/favicon.png" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="preload" href={styles} as="style" />
-    <link rel="stylesheet" href={styles} />
-    <title>Mauro Viveros | GitHub Pages</title>
-
-    <script async type="text/javascript" src="/theme.js"></script>
+    <SEO />
   </head>
   <body class="flex min-h-dvh flex-col justify-center gap-4 p-4">
     <header class="container mx-auto text-end">

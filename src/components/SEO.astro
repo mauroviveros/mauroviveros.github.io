@@ -1,0 +1,28 @@
+---
+import styles from '@styles/global.css?url';
+const description = 'WEB Developer | DEV-OPS';
+const keywords =
+  'Mauro Viveros, Mauro Daniel Viveros, Developer, Web Developer, DevOps, JavaScript, TypeScript, React, Node.js, Astro, GitHub Pages';
+---
+
+<title>Mauro Viveros | GitHub Pages</title>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content="Mauro Daniel Viveros" />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
+<link rel="canonical" href={Astro.site} />
+
+<link rel="alternate icon" type="image/png" href="/favicon.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<link rel="preload" href={styles} as="style" />
+<link rel="stylesheet" href={styles} />
+
+<script async type="text/javascript" src="/theme.js"></script>
