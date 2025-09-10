@@ -1,4 +1,4 @@
-import networks from './networks.json';
+import networks from './NETWORKS.json';
 
 interface Network {
   name: string;
