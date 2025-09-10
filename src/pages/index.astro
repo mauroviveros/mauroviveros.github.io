@@ -1,33 +1,24 @@
 ---
-import { About, Availability, Connect, Experience, Projects } from '@components';
+import { About, Availability, Connect, Experience, Projects, ThemeToggle } from '@components';
 import styles from '@styles/global.css?url';
-import { Icon } from 'astro-icon/components';
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="preload" href={styles} as="style" />
     <link rel="stylesheet" href={styles} />
-    <title>Mauro Viveros | Github Pages</title>
+    <title>Mauro Viveros | GitHub Pages</title>
+
+    <script async type="text/javascript" src="/theme.js"></script>
   </head>
   <body class="flex min-h-dvh flex-col justify-center gap-4 p-4">
     <header class="container mx-auto text-end">
-      <button
-        type="button"
-        title="Toggle Theme"
-        aria-label="Toggle Theme"
-        class:list={[
-          'inline-flex size-9 items-center justify-center rounded-full border text-sm font-medium shadow-xs',
-          'hover:bg-primary/10',
-          'opacity-0',
-        ]}
-      >
-        <Icon name="lucide:sun-moon" class="size-5" />
-      </button>
+      <ThemeToggle />
     </header>
     <main class="container mx-auto grid gap-6 md:grid-cols-3 lg:auto-rows-fr lg:grid-cols-5">
       <About />

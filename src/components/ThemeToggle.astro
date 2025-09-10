@@ -1,0 +1,17 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<button
+  type="button"
+  id="theme-toggle"
+  title="Toggle Theme"
+  aria-label="Toggle Theme"
+  class:list={[
+    'inline-flex cursor-pointer items-center justify-center',
+    'size-9 rounded-full border text-sm font-medium shadow-xs',
+    'hover:bg-primary/20',
+  ]}
+>
+  <Icon name="lucide:sun-moon" class="size-5" />
+</button>
