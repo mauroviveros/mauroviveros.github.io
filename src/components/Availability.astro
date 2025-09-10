@@ -2,7 +2,7 @@
 import Card from './ui/Card.astro';
 ---
 
-<Card class="col-span-1 row-span-1">
+<Card class="col-span-1 row-span-1 md:row-span-2">
   <hgroup class="flex items-center gap-3">
     <div class="h-3 w-3 animate-pulse rounded-full bg-green-500"></div>
     <h3 class="font-semibold">Available</h3>
@@ -10,7 +10,7 @@ import Card from './ui/Card.astro';
 
   <p class="text-muted text-sm">Open to new opportunities</p>
 
-  <div class="space-y-2">
+  <div class="flex flex-1 flex-col justify-end gap-2">
     <div class="flex justify-between">
       <span class="text-muted text-sm">Projects</span>
       <span class="font-semibold">25+</span>

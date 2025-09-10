@@ -1,42 +1,64 @@
 ---
+import { Card } from '@components';
 import { Icon } from 'astro-icon/components';
-import Card from './ui/Card.astro';
+import { getRepos } from 'lib/github';
+const REPOS = await getRepos();
 ---
 
-<Card class="col-span-2 row-span-2">
+<!-- md:h-max  -->
+<Card class="pr-0 md:col-span-3 lg:col-span-2 lg:row-span-3">
   <h3 class="font-semibold">Projects</h3>
 
-  <ul class="flex flex-col gap-4">
-    <li class="flex items-start justify-between">
-      <div class="flex flex-1 flex-col gap-1">
-        <h4 class="font-semibold">E-Commerce Platform</h4>
-        <p class="text-muted text-sm">
-          Modern e-commerce platform with React, Node.js, and PostgreSQL featuring payment
-          processing and real-time inventory.
-        </p>
-        <div class="flex flex-wrap gap-1">
-          <!-- inline-flex items-center justify-center border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground text-xs font-sans rounded-full -->
-          <span
-            class="inline-flex items-center justify-center rounded-full border px-2 py-0.5 text-xs font-medium"
-          >
-            React
-          </span>
-          <span
-            class="inline-flex items-center justify-center rounded-full border px-2 py-0.5 text-xs font-medium"
-          >
-            Node.js
-          </span>
-          <span
-            class="inline-flex items-center justify-center rounded-full border px-2 py-0.5 text-xs font-medium"
-          >
-            PostgreSQL
-          </span>
-        </div>
-      </div>
+  <ul class="overflow-y-ty flex flex-col gap-4 overflow-x-auto pr-4">
+    {
+      REPOS.map(({ name, description, topics, homepage, html_url }) => (
+        <li class="flex items-start justify-between">
+          <div class="flex flex-1 flex-col gap-1">
+            <h4 class="font-semibold">{name}</h4>
 
-      <a href="#">
-        <Icon name="lucide:external-link" />
-      </a>
-    </li>
+            <p class="text-muted text-sm">{description}</p>
+
+            <div class="flex flex-wrap gap-1">
+              {topics.slice(0, 3).map((topic) => (
+                <span class="inline-flex items-center justify-center rounded-full border px-2 py-0.5 text-xs font-medium">
+                  {topic}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div class="flex gap-1">
+            {[
+              {
+                url: homepage,
+                icon: 'lucide:external-link',
+                label: 'Live Demo',
+              },
+              {
+                url: html_url,
+                icon: 'lucide:code',
+                label: 'GitHub Repository',
+              },
+            ]
+              .filter(({ url }) => url)
+              .map(({ url, icon, label }) => (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={label}
+                  aria-label={label}
+                  class:list={[
+                    'inline-flex size-8 items-center justify-center rounded-full border text-sm font-medium shadow-xs',
+                    'hover:bg-primary/10',
+                  ]}
+                >
+                  <Icon name={icon} />
+                </a>
+              ))}
+          </div>
+        </li>
+      ))
+    }
   </ul>
 </Card>

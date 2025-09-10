@@ -1,10 +1,11 @@
 ---
-import Avatar from './ui/Avatar.astro';
-import Card from './ui/Card.astro';
+import { Avatar, Card } from '@components';
 import { Icon } from 'astro-icon/components';
+
+const TECHNOLOGIES = ['Astro', 'Angular', 'NestJS', 'TailwindCSS', 'TypeScript'];
 ---
 
-<Card class="col-span-2 row-span-3">
+<Card class="md:col-span-2 md:row-span-3 lg:col-span-2 lg:row-span-5">
   <div class="flex items-center gap-4">
     <Avatar initials="MV" class="size-16" />
     <hgroup>
@@ -27,9 +28,9 @@ import { Icon } from 'astro-icon/components';
   <div class="flex flex-wrap gap-1">
     <!-- inline-flex items-center justify-center border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90 font-sans text-xs rounded-full -->
     {
-      [0, 1, 2, 3].map(() => (
+      TECHNOLOGIES.map((tech) => (
         <span class="inline-flex w-fit shrink-0 items-center justify-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium whitespace-nowrap">
-          Node.js
+          {tech}
         </span>
       ))
     }
