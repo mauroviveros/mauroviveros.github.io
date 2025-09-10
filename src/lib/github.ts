@@ -1,4 +1,4 @@
-import { GITHUB_TOKEN } from "astro:env/server";
+import { API_GITHUB_TOKEN } from "astro:env/server";
 
 interface Repository {
   readonly name: string;
@@ -16,7 +16,7 @@ interface User {
 export const getRepos = async () => {
   const response = await fetch('https://api.github.com/users/mauroviveros/repos?sort=created', {
     headers: {
-      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      Authorization: `Bearer ${API_GITHUB_TOKEN}`,
     },
   });
 
@@ -26,7 +26,7 @@ export const getRepos = async () => {
 export const getUser = async () => {
   const response = await fetch('https://api.github.com/users/mauroviveros', {
     headers: {
-      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      Authorization: `Bearer ${API_GITHUB_TOKEN}`,
     },
   });
 
