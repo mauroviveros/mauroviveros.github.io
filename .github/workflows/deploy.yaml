@@ -17,9 +17,9 @@ jobs:
         run: npm install
 
       - name: Build Astro Compile
-        run: npm run build
         env:
-          API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
+          API_GITHUB_TOKEN: ${{ vars.API_GITHUB_TOKEN }}
+        run: npm run build
 
       - name: Archive Build
         uses: actions/upload-artifact@v4.6.0
