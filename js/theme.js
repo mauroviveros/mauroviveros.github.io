@@ -1,5 +1,5 @@
 (function () {
-  const btn = document.getElementById('theme-toggle');
+  const btn = document.querySelector('#theme-toggle');
   const query = window.matchMedia('(prefers-color-scheme: dark)');
   const theme = query.matches ? 'dark' : 'light';
 
