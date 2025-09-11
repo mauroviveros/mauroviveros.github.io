@@ -1,10 +1,9 @@
 <div align="center">
 
-![Banner](https://drive.google.com/thumbnail?id=1XMUUBRD_NQ0VEIe1dlDxbjh7XB57b7VW&sz=w960)
+![Mauro Viveros | GitHub Pages](https://drive.google.com/thumbnail?id=14pW9nfynT9W9hN9bMkmk2AV1lje8PIGp&sz=w960)
+# [Mauro Viveros | GitHub Pages](https://mauroviveros.github.io/)
 
-# [Mauro’s Link Hub](https://mauroviveros.github.io/)
-
-Welcome to my personal link hub! Here you can find quick access to all my networks, profiles, and important links in one place.
+A quick look at who I am, my GitHub repos, work experience, and how to reach me.
 
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/mauroviveros/mauroviveros.github.io?logo=git)
@@ -33,7 +32,6 @@ Welcome to my personal link hub! Here you can find quick access to all my networ
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 | `pnpm lint`            | Run ESLint to check for code issues              |
-| `pnpm format`          | Format code using Prettier                       |
 
 ## 📜 License
 
