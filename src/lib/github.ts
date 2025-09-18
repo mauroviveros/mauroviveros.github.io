@@ -29,6 +29,7 @@ export const getRepos = async () => {
     .filter(({ fork }) => !fork)
     .filter(({ topics }) => !topics.includes('github-profile'))
     .filter(({ topics }) => !topics.includes('github-pages'))
+    .filter(({ name }) => name !== 'varela_aluminio-landing')
 }
 
 export const getUser = async () => {
