@@ -1,22 +1,16 @@
+import type { Package } from "@types/packages";
+import type { Repository } from "@types/repos";
+import type { User } from "@types/user";
 import { API_GITHUB_TOKEN } from "astro:env/server";
 const API_URL = 'https://api.github.com/users/mauroviveros';
 
-interface Repository {
-  readonly name: string;
-  readonly description: string;
-  readonly topics: string[];
-  readonly homepage?: string;
-  readonly html_url: string;
-  readonly private: boolean;
-  readonly fork: boolean;
-}
-
-interface User {
-  readonly public_repos: number;
-  readonly created_at: string;
-}
-
 const request: RequestInit = { headers: { Authorization: `Bearer ${API_GITHUB_TOKEN}` } }
+
+export const getPackages = async () => {
+  const response = await fetch(`${API_URL}/packages?package_type=npm`, request);
+  const data = await response.json() as Package[];
+  return data
+}
 
 export const getRepos = async () => {
   const response = await fetch(`${API_URL}/repos?sort=updated`, request);
@@ -28,12 +22,10 @@ export const getRepos = async () => {
     .filter(repo => !repo.private)
     .filter(({ fork }) => !fork)
     .filter(({ topics }) => !topics.includes('github-profile'))
-    .filter(({ topics }) => !topics.includes('github-pages'))
-    .filter(({ name }) => name !== 'varela_aluminio-landing')
+    .filter(({ topics }) => !topics.includes('github-pages'));
 }
 
 export const getUser = async () => {
   const response = await fetch(API_URL, request);
-
   return (await response.json()) as User;
 }

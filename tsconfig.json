@@ -9,6 +9,8 @@
       "@constants": ["./constants/index.ts"],
       "@scripts/*": ["./scripts/*"],
       "@styles/*": ["./styles/*"],
+      "@types/*": ["./types/*"],
+      "@lib/*": ["./lib/*"]
     }
   }
 }

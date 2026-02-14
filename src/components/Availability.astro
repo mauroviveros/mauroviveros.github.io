@@ -4,7 +4,7 @@ import Card from './ui/Card.astro';
 
 const user = await getUser();
 const { public_repos, created_at } = user;
-const getYears = (dateString: string) => {
+const getYears = (dateString: Date) => {
   return new Date().getFullYear() - new Date(dateString).getFullYear();
 };
 const years = getYears(created_at);
