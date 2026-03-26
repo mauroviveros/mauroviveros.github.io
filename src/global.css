@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import 'tailwind-animations';
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-background: oklch(0.9597 0.0052 247.88);
+  --color-foreground: oklch(0.1039 0.0194 248.35);
+  --color-border: oklch(0.4132 0.0162 251.74);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: var(--color-foreground);
+  --color-muted: oklch(0.531 0.0172 251.29);
+
+  --color-primary: #241199;
+  --color-primary-foreground: #ffffff;
+}
+
+html[data-theme=dark]{
+  --color-background: oklch(0.2198 0.0182 255.71);
+  --color-foreground: oklch(0.9703 0.0103 247.93);
+  --color-border: oklch(0.797 0.0169 262.74);
+  --color-card: oklch(0.2735 0.0179 251.92);
+  --color-card-foreground: var(--color-foreground);
+  --color-muted: oklch(0.6625 0.0181 250.92);
+
+  --color-primary: #A89AF4;
+  --color-primary-foreground: #151b23;
+}
+
+@layer base {
+  * { @apply border-border; }
+}

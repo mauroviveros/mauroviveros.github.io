@@ -3,14 +3,9 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"],
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@components": ["./components/index.ts"],
-      "@constants": ["./constants/index.ts"],
-      "@scripts/*": ["./scripts/*"],
-      "@styles/*": ["./styles/*"],
-      "@types/*": ["./types/*"],
-      "@lib/*": ["./lib/*"]
+      "@/*": ["./src/*"]
     }
   }
 }

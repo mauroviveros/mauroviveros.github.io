@@ -52,11 +52,11 @@ export interface Repository {
     readonly ssh_url:                      string;
     readonly clone_url:                    string;
     readonly svn_url:                      string;
-    readonly homepage:                     null;
+    readonly homepage:                     null | string;
     readonly size:                         number;
     readonly stargazers_count:             number;
     readonly watchers_count:               number;
-    readonly language:                     string;
+    readonly language:                     null | string;
     readonly has_issues:                   boolean;
     readonly has_projects:                 boolean;
     readonly has_downloads:                boolean;
@@ -68,41 +68,87 @@ export interface Repository {
     readonly archived:                     boolean;
     readonly disabled:                     boolean;
     readonly open_issues_count:            number;
-    readonly license:                      null;
+    readonly license:                      License | null;
     readonly allow_forking:                boolean;
     readonly is_template:                  boolean;
     readonly web_commit_signoff_required:  boolean;
     readonly has_pull_requests:            boolean;
-    readonly pull_request_creation_policy: string;
-    readonly topics:                       any[];
-    readonly visibility:                   string;
+    readonly pull_request_creation_policy: PullRequestCreationPolicy;
+    readonly topics:                       string[];
+    readonly visibility:                   Visibility;
     readonly forks:                        number;
     readonly open_issues:                  number;
     readonly watchers:                     number;
-    readonly default_branch:               string;
+    readonly default_branch:               DefaultBranch;
     readonly permissions:                  Permissions;
+    urls:                                  Record<string, string | null | undefined>;
+}
+
+export enum DefaultBranch {
+    Main = "main",
+    Master = "master",
+}
+
+export interface License {
+    readonly key:     string;
+    readonly name:    string;
+    readonly spdx_id: string;
+    readonly url:     string;
+    readonly node_id: string;
 }
 
 export interface Owner {
-    readonly login:               string;
+    readonly login:               Login;
     readonly id:                  number;
-    readonly node_id:             string;
+    readonly node_id:             NodeID;
     readonly avatar_url:          string;
     readonly gravatar_id:         string;
     readonly url:                 string;
     readonly html_url:            string;
     readonly followers_url:       string;
-    readonly following_url:       string;
-    readonly gists_url:           string;
-    readonly starred_url:         string;
+    readonly following_url:       FollowingURL;
+    readonly gists_url:           GistsURL;
+    readonly starred_url:         StarredURL;
     readonly subscriptions_url:   string;
     readonly organizations_url:   string;
     readonly repos_url:           string;
-    readonly events_url:          string;
+    readonly events_url:          EventsURL;
     readonly received_events_url: string;
-    readonly type:                string;
-    readonly user_view_type:      string;
+    readonly type:                Type;
+    readonly user_view_type:      Visibility;
     readonly site_admin:          boolean;
+}
+
+export enum EventsURL {
+    HTTPSAPIGithubCOMUsersMauroviverosEventsPrivacy = "https://api.github.com/users/mauroviveros/events{/privacy}",
+}
+
+export enum FollowingURL {
+    HTTPSAPIGithubCOMUsersMauroviverosFollowingOtherUser = "https://api.github.com/users/mauroviveros/following{/other_user}",
+}
+
+export enum GistsURL {
+    HTTPSAPIGithubCOMUsersMauroviverosGistsGistID = "https://api.github.com/users/mauroviveros/gists{/gist_id}",
+}
+
+export enum Login {
+    Mauroviveros = "mauroviveros",
+}
+
+export enum NodeID {
+    MDQ6VXNlcjQ0MDc2OTE0 = "MDQ6VXNlcjQ0MDc2OTE0",
+}
+
+export enum StarredURL {
+    HTTPSAPIGithubCOMUsersMauroviverosStarredOwnerRepo = "https://api.github.com/users/mauroviveros/starred{/owner}{/repo}",
+}
+
+export enum Type {
+    User = "User",
+}
+
+export enum Visibility {
+    Public = "public",
 }
 
 export interface Permissions {
@@ -111,4 +157,8 @@ export interface Permissions {
     readonly push:     boolean;
     readonly triage:   boolean;
     readonly pull:     boolean;
+}
+
+export enum PullRequestCreationPolicy {
+    All = "all",
 }

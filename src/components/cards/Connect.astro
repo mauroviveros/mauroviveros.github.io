@@ -1,0 +1,22 @@
+---
+import { Card } from "@/components/ui";
+import { NETWORKS } from "@/constants";
+import { Icon } from "astro-icon/components";
+import type { HTMLAttributes } from "astro/types";
+export interface Props extends HTMLAttributes<'section'> {}
+const { class: className } = Astro.props;
+---
+<Card class:list={[className]}>
+  <h3 class="font-semibold">Connect</h3>
+
+  <ul class="space-y-3">
+    {NETWORKS.map(({ name, url, icon }) => (
+      <li class="hover:text-primary hover:translate-x-1 hover:underline transition-all duration-300">
+        <a href={url} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm">
+          <Icon name={icon}/>
+          {name}
+        </a>
+      </li>
+    ))}
+  </ul>
+</Card>

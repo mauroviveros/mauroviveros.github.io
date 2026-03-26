@@ -1,0 +1,28 @@
+---
+import { Avatar, Card } from "@/components/ui";
+import { SITE } from "@/constants";
+import type { HTMLAttributes } from "astro/types";
+import { getCollection } from "astro:content";
+export interface Props extends HTMLAttributes<'section'> {}
+const { class: className } = Astro.props;
+
+const EXPERIENCE = await getCollection("experience", ({ data: { about } }) => {
+  return about.id === SITE.ABOUT_ENTRY;
+});
+---
+<Card class:list={[className]}>
+  <h3 class="font-semibold">Work Experience</h3>
+
+  <ul class="space-y-3">
+    {EXPERIENCE.map(({ data: { role, company, period, initials }}) => (
+      <li class="flex items-center gap-2">
+        <Avatar initials={initials} name={company} class="size-10 text-xs"/>
+  
+        <div class="flex-1">
+          <span class="text-sm font-semibold">{role}</span>
+          <p class="text-muted text-xs">{company}, • {period}</p>
+        </div>
+      </li>
+    ))}
+  </ul>
+</Card>

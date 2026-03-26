@@ -1,17 +1,21 @@
-import networks from './NETWORKS.json';
-import experience from './EXPERIENCE.json';
+export * from './networks';
+export * from './site';
 
-interface Network {
-  readonly name: string;
-  readonly url: string;
-  readonly icon: string;
+interface Action {
+  icon: string;
+  title: string;
 }
-interface Experience {
-  readonly company: "Comunidad IT",
-  readonly role: "Programming Instructor",
-  readonly period: "2022 - 2023",
-  readonly initials: "IT"
+export const ACTIONS: Record<string, Action> = {
+  homepage: {
+    icon: "lucide:external-link",
+    title: "View Live Demo",
+  },
+  repo_url: {
+    icon: "lucide:code",
+    title: "View Source Code",
+  },
+  pkg_url: {
+    icon: 'lucide:package',
+    title: 'Github Package',
+  }
 }
-
-export const NETWORKS = networks as Network[];
-export const EXPERIENCE = experience as Experience[];

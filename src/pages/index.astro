@@ -1,28 +1,72 @@
 ---
-import { About, Availability, Connect, Experience, Projects, SEO, ThemeToggle } from '@components';
-import Fork from 'components/Fork.astro';
+import { About, Availability, Connect, Experience, Projects } from "@/components/cards";
+import { Fork, MetaTags, Theme } from "@/components";
+
 ---
 
 <html lang="en">
   <head>
-    <SEO />
+    <MetaTags/>
+
+    <script is:inline>
+      (function(){
+        const query = window.matchMedia('(prefers-color-scheme: dark)');
+        const setTheme = () => document.documentElement.setAttribute('data-theme', query.matches ? 'dark' : 'light');
+        query.addEventListener('change', setTheme);
+        setTheme();
+      })();
+    </script>
   </head>
-  <body class="flex min-h-dvh flex-col justify-center gap-4 p-4">
-    <Fork />
-    <header class="container mx-auto text-end">
-      <ThemeToggle />
+  <body
+    class:list={[
+      "bg-background text-foreground min-h-dvh p-4",
+      "flex flex-col justify-center gap-4",
+      "transition-colors duration-500",
+      "container mx-auto"
+    ]}
+  >
+    <header class="text-end">
+      <Fork/>
+      <Theme class="animate-fade-in-down animate-delay-500"/>
     </header>
-    <main class="container mx-auto grid gap-6 md:grid-cols-3 lg:auto-rows-fr lg:grid-cols-5">
-      <About />
-      <Experience />
-      <Availability />
-      <Connect />
-      <Projects />
+
+    <main class="grid gap-6 md:grid-cols-3 lg:auto-rows-fr lg:grid-cols-5">
+      <About
+        class:list={[
+          "md:col-span-2 md:row-span-3 lg:col-span-2 lg:row-span-5",
+          "animate-fade-in-up"
+        ]}
+      />
+      <Experience
+        class:list={[
+          "col-start-auto md:col-start-3 md:row-span-5 lg:col-span-2 lg:row-span-2",
+          "animate-fade-in-up animate-delay-100"
+        ]}
+      />
+      <Availability
+        class:list={[
+          "col-span-1 row-span-1 md:row-span-2",
+          "animate-fade-in-up animate-delay-200"
+        ]}
+      />
+      <Connect
+        class:list={[
+          "md:col-span-1 md:row-span-2 lg:row-span-3",
+          "animate-fade-in-up animate-delay-300"
+        ]}
+      />
+      <Projects
+        class:list={[
+          "md:col-span-3 lg:col-span-2 lg:row-span-3",
+          "animate-fade-in-up animate-delay-400"
+        ]}
+      />
     </main>
-    <footer class="container mx-auto text-center md:text-left">
-      <p class="text-muted text-sm leading-9">
-        Built with ❤️ • © 2025 Mauro Viveros
-        <span class="float-right">Last updated: {new Date().toLocaleDateString()}</span>
+
+    <footer class="text-center md:text-left animate-fade-in animate-delay-500">
+      <p class="text-muted text-sm leading-6 px-4">
+        Built with ❤️ • © {new Date().getFullYear()} Mauro Viveros
+        <span class="float-right">Last Updated: {new Date().toLocaleDateString()}</span>
       </p>
     </footer>
   </body>

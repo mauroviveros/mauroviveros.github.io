@@ -1,16 +1,15 @@
 ---
-import { getUser } from 'lib/github';
-import Card from './ui/Card.astro';
+import { Card } from "@/components/ui";
+import { getUser } from "@/lib/github";
+import type { HTMLAttributes } from "astro/types";
+export interface Props extends HTMLAttributes<'section'> {}
+const { class: className } = Astro.props;
 
-const user = await getUser();
-const { public_repos, created_at } = user;
-const getYears = (dateString: Date) => {
-  return new Date().getFullYear() - new Date(dateString).getFullYear();
-};
-const years = getYears(created_at);
+const { public_repos, created_at } = await getUser();
+const repos = Math.floor(public_repos / 10) * 10;
+const getYears = (dateString: Date) => new Date().getFullYear() - new Date(dateString).getFullYear();
 ---
-
-<Card class="col-span-1 row-span-1 md:row-span-2">
+<Card class:list={[className]}>
   <hgroup class="flex items-center gap-3">
     <div class="relative flex">
       <span class="absolute h-3 w-3 animate-ping rounded-full bg-green-300"></span>
@@ -18,17 +17,17 @@ const years = getYears(created_at);
     </div>
     <h3 class="font-semibold">Available</h3>
   </hgroup>
-
+  
   <p class="text-muted text-sm">Open to new opportunities</p>
 
   <div class="flex flex-1 flex-col justify-end gap-2">
     <div class="flex justify-between">
       <span class="text-muted text-sm">Projects</span>
-      <span class="font-semibold">{public_repos && `${public_repos}+`}</span>
+      <span class="font-semibold">{public_repos >= 10 ? `${repos}+` : `${public_repos}`}</span>
     </div>
     <div class="flex justify-between">
       <span class="text-muted text-sm">Experience</span>
-      <span class="font-semibold">{years && `${years} years`}</span>
+      <span class="font-semibold">{getYears(created_at)} years</span>
     </div>
   </div>
 </Card>

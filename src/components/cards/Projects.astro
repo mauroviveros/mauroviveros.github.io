@@ -1,0 +1,61 @@
+---
+import { Card } from "@/components/ui";
+import { ACTIONS } from "@/constants";
+import { getRepos } from "@/lib/github";
+import { Icon } from "astro-icon/components";
+import type { HTMLAttributes } from "astro/types";
+import Badge from "../ui/Badge.astro";
+export interface Props extends HTMLAttributes<'section'> {}
+
+const { class: className } = Astro.props;
+const REPOS = await getRepos();
+---
+<Card class:list={["lg:max-h-120", className]}>
+  <h3 class="font-semibold">Projects</h3>
+
+  <ul class="overflow-y-scroll space-y-2 pl-1 pr-3">
+    {REPOS.map(({ name, full_name, description, topics, urls }) => {
+      const actions = Object.entries(ACTIONS).filter(([key]) => !!urls[key]);
+
+      return (
+        <li class="flex items-center flex-wrap gap-2 relative not-last:pb-2 not-last:border-b not-last:border-border/10" >
+          <div class="flex flex-col gap-1 max-w-3/4">
+            <h5 class="font-semibold">{urls.pkg_url ? `@${full_name}` : name}</h5>
+
+            <p class="text-muted text-sm">{description}</p>
+
+            {!!topics.length && (
+              <div class="flex flex-wrap gap-1">
+                {topics.map((topic) => (
+                  <Badge>{topic}</Badge>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {!!actions.length && (
+            <div class="inline-flex gap-1 ml-auto">
+              {actions.map(([key, { icon, title }]) => (
+                <a
+                  href={urls[key]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={title}
+                  aria-label={title}
+                  class:list={[
+                    "bg-background text-foreground border text-sm font-medium",
+                    "inline-flex items-center justify-center",
+                    "hover:bg-primary/20 transition-colors",
+                    "size-8 rounded-full"
+                  ]}
+                >
+                  <Icon name={icon}/>
+                </a>
+              ))}
+            </div>
+          )}
+        </li>
+      )
+    })}
+  </ul>
+</Card>
