@@ -12,8 +12,9 @@ const getInitials = (name: string) => name.split(' ').map(w => w.charAt(0)).join
     "bg-primary text-primary-foreground",
     "flex items-center justify-center",
     "text-2xl rounded-full font-bold",
+    "overflow-hidden",
     className
   ]}
 >
-  {initials || getInitials(name || '')}
+  {Astro.slots.has("default") ? <slot /> : initials || getInitials(name || "")}
 </div>

@@ -1,20 +1,30 @@
 ---
 import { Avatar, Badge, Card } from "@/components/ui";
 import { SITE } from "@/constants";
+import { getUser } from "@/lib/github";
 import type { HTMLAttributes } from "astro/types";
+import { Image } from "astro:assets";
 import { getEntry, render } from "astro:content";
-import Icon from "node_modules/astro-icon/components/Icon.astro";
+import { Icon } from "astro-icon/components"
 export interface Props extends HTMLAttributes<'section'> {}
 
 const { class: className } = Astro.props;
 const about = await getEntry("about", SITE.ABOUT_ENTRY);
+const { avatar_url } = await getUser();
 
 if(!about) return null;
 const { Content } = await render(about);
 ---
 <Card class:list={[className]}>
   <div class="flex items-center gap-4">
-    <Avatar initials="MV" class="size-16" />
+    <Avatar name={about.data.full_name} class="size-16">
+      <Image
+        src={avatar_url}
+        alt={about.data.full_name || 'Avatar'}
+        width={64}
+        height={64}
+      />
+    </Avatar>
     <hgroup>
       <h2 class="text-xl font-bold">About me</h2>
       <div class="text-muted flex items-center gap-2 text-sm">

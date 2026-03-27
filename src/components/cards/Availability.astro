@@ -7,7 +7,7 @@ const { class: className } = Astro.props;
 
 const { public_repos, created_at } = await getUser();
 const repos = Math.floor(public_repos / 10) * 10;
-const getYears = (dateString: Date) => new Date().getFullYear() - new Date(dateString).getFullYear();
+const getYears = (dateString: Date | string) => new Date().getFullYear() - new Date(dateString).getFullYear();
 ---
 <Card class:list={[className]}>
   <hgroup class="flex items-center gap-3">
