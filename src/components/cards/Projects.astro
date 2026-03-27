@@ -10,7 +10,7 @@ export interface Props extends HTMLAttributes<'section'> {}
 const { class: className } = Astro.props;
 const REPOS = await getRepos();
 ---
-<Card class:list={["lg:max-h-120", className]}>
+<Card class:list={["", className]}>
   <h3 class="font-semibold">Projects</h3>
 
   <ul class="overflow-y-scroll space-y-2 pl-1 pr-3">

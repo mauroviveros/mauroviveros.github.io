@@ -30,7 +30,13 @@ import { Fork, MetaTags, Theme } from "@/components";
       <Theme class="animate-fade-in-down animate-delay-500"/>
     </header>
 
-    <main class="grid gap-6 md:grid-cols-3 lg:auto-rows-fr lg:grid-cols-5">
+    <main
+      class:list={[
+        "grid md:grid-cols-3 lg:grid-cols-5",
+        "gap-6 lg:auto-rows-fr",
+        "min-h-0 lg:max-h-[calc(100dvh-8rem)]"
+      ]}
+    >
       <About
         class:list={[
           "md:col-span-2 md:row-span-3 lg:col-span-2 lg:row-span-5",
