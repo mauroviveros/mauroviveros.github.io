@@ -19,6 +19,6 @@
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.103"
+    "@iconify-json/lucide": "^1.2.105"
   }
 }
