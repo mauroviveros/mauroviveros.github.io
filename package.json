@@ -16,7 +16,7 @@
     "astro": "^6.1.9",
     "astro-icon": "^1.1.5",
     "tailwind-animations": "^1.0.1",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.103"
