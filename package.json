@@ -11,14 +11,15 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "packageManager": "pnpm@11.3.0",
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.4",
-    "astro": "^6.1.9",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.3.7",
     "astro-icon": "^1.1.5",
     "tailwind-animations": "^1.0.1",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.103"
+    "@iconify-json/lucide": "^1.2.109"
   }
 }
