@@ -19,6 +19,7 @@ const about = await getEntry("about", SITE.ABOUT_ENTRY);
   <meta name="googlebot" content="index, follow" />
 
   <link rel="canonical" href={Astro.site} />
+  <link rel="alternate" type="application/rss+xml" title={`${about?.data.full_name} | RSS Feed`} href="/rss.xml" />
 
   <link rel="preconnect" href="https://api.github.com" />
 
