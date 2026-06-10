@@ -6,15 +6,25 @@ import { API_GITHUB_TOKEN } from "astro:env/server";
 
 const request: RequestInit = { headers: { Authorization: `Bearer ${API_GITHUB_TOKEN}` } };
 
-export const getPackages = async () => {
-  const response = await fetch(`${SITE.GITHUB_API_URL}/packages?package_type=npm`, request);
-  const data = await response.json() as Package[];
-  return data
+async function fetchJson<T>(url: string, fallback: T): Promise<T> {
+  try {
+    const response = await fetch(url, request);
+    if (!response.ok) {
+      console.warn(`[GitHub API] ${url} → ${response.status} ${response.statusText}`);
+      return fallback;
+    }
+    return await response.json() as T;
+  } catch (error) {
+    console.warn(`[GitHub API] ${url} →`, error);
+    return fallback;
+  }
 }
 
+export const getPackages = async () =>
+  fetchJson<Package[]>(`${SITE.GITHUB_API_URL}/packages?package_type=npm`, []);
+
 export const getRepos = async () => {
-  const response = await fetch(`${SITE.GITHUB_API_URL}/repos?sort=updated`, request);
-  const data = await response.json() as Repository[];
+  const data = await fetchJson<Repository[]>(`${SITE.GITHUB_API_URL}/repos?sort=updated`, []);
   const packages = await getPackages();
 
   return data
@@ -35,7 +45,5 @@ export const getRepos = async () => {
     });
 }
 
-export const getUser = async () => {
-  const response = await fetch(`${SITE.GITHUB_API_URL}`, request);
-  return (await response.json()) as User;
-}
+export const getUser = async () =>
+  fetchJson<Partial<User>>(`${SITE.GITHUB_API_URL}`, {});
