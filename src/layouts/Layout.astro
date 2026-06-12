@@ -1,0 +1,44 @@
+---
+import { Fork, MetaTags, Theme } from '@/components';
+---
+
+<html lang="en">
+  <head>
+    <MetaTags />
+
+    <script is:inline>
+      (function () {
+        const query = window.matchMedia('(prefers-color-scheme: dark)');
+        const setTheme = () =>
+          document.documentElement.setAttribute(
+            'data-theme',
+            query.matches ? 'dark' : 'light',
+          );
+        query.addEventListener('change', setTheme);
+        setTheme();
+      })();
+    </script>
+  </head>
+  <body
+    class:list={[
+      'bg-background text-foreground min-h-dvh p-4',
+      'flex flex-col justify-center gap-4',
+      'transition-colors duration-500',
+      'container mx-auto',
+    ]}
+  >
+    <header class="text-end">
+      <Fork />
+      <Theme class="animate-fade-in-down animate-delay-500" />
+    </header>
+
+    <footer class="animate-fade-in animate-delay-500 text-center md:text-left">
+      <p class="text-muted px-4 text-sm leading-6">
+        Built with ❤️ • © {new Date().getFullYear()} Mauro Viveros
+        <span class="float-right"
+          >Last Updated: {new Date().toLocaleDateString()}</span
+        >
+      </p>
+    </footer>
+  </body>
+</html>

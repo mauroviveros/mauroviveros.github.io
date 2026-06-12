@@ -37,7 +37,7 @@ const { Content } = await render(about);
       <h2 class="text-xl font-bold">About me</h2>
       <div class="text-muted flex items-center gap-2 text-sm">
         <Icon name="lucide:map-pin" />
-        <span>Argentina</span>
+        <span>{about.data.country}</span>
       </div>
     </hgroup>
   </div>
