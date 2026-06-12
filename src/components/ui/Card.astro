@@ -1,8 +1,14 @@
 ---
-import type { HTMLAttributes } from 'astro/types'
+import type { HTMLAttributes } from 'astro/types';
 export interface Props extends HTMLAttributes<'section'> {}
 const { class: className } = Astro.props;
 ---
-<section class:list={["bg-card text-card-foreground flex flex-col rounded-2xl border p-6 gap-4", className]}>
+
+<section
+  class:list={[
+    'bg-card text-card-foreground flex flex-col gap-4 rounded-2xl border p-6',
+    className,
+  ]}
+>
   <slot />
 </section>

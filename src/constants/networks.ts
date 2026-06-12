@@ -1,28 +1,28 @@
-import type { Network } from "@/types";
+import type { Network } from '@/types';
 export const NETWORKS: Network[] = [
   {
-    name: "GitHub",
-    url: "https://github.com/mauroviveros",
-    icon: "lucide:github"
+    name: 'GitHub',
+    url: 'https://github.com/mauroviveros',
+    icon: 'lucide:github',
   },
   {
-    name: "LinkedIn",
-    url: "https://linkedin.com/in/mauroviveros",
-    icon: "lucide:linkedin"
+    name: 'LinkedIn',
+    url: 'https://linkedin.com/in/mauroviveros',
+    icon: 'lucide:linkedin',
   },
   {
-    name: "Instagram",
-    url: "https://instagram.com/maurogontier",
-    icon: "lucide:instagram"
+    name: 'Instagram',
+    url: 'https://instagram.com/maurogontier',
+    icon: 'lucide:instagram',
   },
   {
-    name: "Portfolio",
-    url: "https://mauroviveros.com.ar",
-    icon: "lucide:briefcase"
+    name: 'Portfolio',
+    url: 'https://mauroviveros.com.ar',
+    icon: 'lucide:briefcase',
   },
   {
-    name: "Email",
-    url: "mailto:maurod.viveros@gmail.com",
-    icon: "lucide:mail"
-  }
-]
+    name: 'Email',
+    url: 'mailto:maurod.viveros@gmail.com',
+    icon: 'lucide:mail',
+  },
+];

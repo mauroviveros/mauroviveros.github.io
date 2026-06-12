@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @import 'tailwind-animations';
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
@@ -15,7 +15,7 @@
   --color-primary-foreground: #ffffff;
 }
 
-html[data-theme=dark]{
+html[data-theme='dark'] {
   --color-background: oklch(0.2198 0.0182 255.71);
   --color-foreground: oklch(0.9703 0.0103 247.93);
   --color-border: oklch(0.797 0.0169 262.74);
@@ -23,10 +23,12 @@ html[data-theme=dark]{
   --color-card-foreground: var(--color-foreground);
   --color-muted: oklch(0.6625 0.0181 250.92);
 
-  --color-primary: #A89AF4;
+  --color-primary: #a89af4;
   --color-primary-foreground: #151b23;
 }
 
 @layer base {
-  * { @apply border-border; }
+  * {
+    @apply border-border;
+  }
 }

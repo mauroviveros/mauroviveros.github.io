@@ -1,19 +1,22 @@
 // @ts-check
+import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, envField } from 'astro/config';
-import tailwindcss from "@tailwindcss/vite";
-import icon from "astro-icon";
-import sitemap from "@astrojs/sitemap";
+import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://mauroviveros.github.io/",
+  site: 'https://mauroviveros.github.io/',
   integrations: [icon(), sitemap()],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
   env: {
     schema: {
-      API_GITHUB_TOKEN: envField.string({ context: "server", access: "secret" })
-    }
-  }
+      API_GITHUB_TOKEN: envField.string({
+        context: 'server',
+        access: 'secret',
+      }),
+    },
+  },
 });

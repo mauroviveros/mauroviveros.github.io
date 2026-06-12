@@ -1,10 +1,10 @@
 <div align="center">
 
 ![Mauro Viveros | GitHub Pages](https://drive.google.com/thumbnail?id=14pW9nfynT9W9hN9bMkmk2AV1lje8PIGp&sz=w960)
+
 # [Mauro Viveros | GitHub Pages](https://mauroviveros.github.io/)
 
 A quick look at who I am, my GitHub repos, work experience, and how to reach me.
-
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/mauroviveros/mauroviveros.github.io?logo=git)
 ![GitHub License](https://img.shields.io/github/license/mauroviveros/mauroviveros.github.io?logo=github)
@@ -14,6 +14,7 @@ A quick look at who I am, my GitHub repos, work experience, and how to reach me.
 [![Astro][astro-badge]][astro-link]
 [![TailwindCSS][tailwind-badge]][tailwind-link]
 ![Github Pages][github-pages-badge]
+
 </div>
 
 ## 📦 Requirements
@@ -32,6 +33,7 @@ A quick look at who I am, my GitHub repos, work experience, and how to reach me.
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 | `pnpm lint`            | Run ESLint to check for code issues              |
+| `pnpm format:check`    | Run Prettier to check formatting without writing |
 
 ## 📜 License
 

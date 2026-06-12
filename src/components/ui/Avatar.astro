@@ -1,20 +1,25 @@
 ---
-import type { HTMLAttributes } from 'astro/types'
+import type { HTMLAttributes } from 'astro/types';
 export interface Props extends HTMLAttributes<'div'> {
   initials?: string;
   name?: string;
 }
 const { initials, name, class: className } = Astro.props;
-const getInitials = (name: string) => name.split(' ').map(w => w.charAt(0)).join('');
+const getInitials = (name: string) =>
+  name
+    .split(' ')
+    .map((w) => w.charAt(0))
+    .join('');
 ---
+
 <div
   class:list={[
-    "bg-primary text-primary-foreground",
-    "flex items-center justify-center",
-    "text-2xl rounded-full font-bold",
-    "overflow-hidden",
-    className
+    'bg-primary text-primary-foreground',
+    'flex items-center justify-center',
+    'rounded-full text-2xl font-bold',
+    'overflow-hidden',
+    className,
   ]}
 >
-  {Astro.slots.has("default") ? <slot /> : initials || getInitials(name || "")}
+  {Astro.slots.has('default') ? <slot /> : initials || getInitials(name || '')}
 </div>

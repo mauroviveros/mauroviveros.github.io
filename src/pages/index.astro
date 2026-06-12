@@ -1,17 +1,26 @@
 ---
-import { About, Availability, Connect, Experience, Projects } from "@/components/cards";
-import { Fork, MetaTags, Theme } from "@/components";
-
+import { Fork, MetaTags, Theme } from '@/components';
+import {
+  About,
+  Availability,
+  Connect,
+  Experience,
+  Projects,
+} from '@/components/cards';
 ---
 
 <html lang="en">
   <head>
-    <MetaTags/>
+    <MetaTags />
 
     <script is:inline>
-      (function(){
+      (function () {
         const query = window.matchMedia('(prefers-color-scheme: dark)');
-        const setTheme = () => document.documentElement.setAttribute('data-theme', query.matches ? 'dark' : 'light');
+        const setTheme = () =>
+          document.documentElement.setAttribute(
+            'data-theme',
+            query.matches ? 'dark' : 'light',
+          );
         query.addEventListener('change', setTheme);
         setTheme();
       })();
@@ -19,60 +28,62 @@ import { Fork, MetaTags, Theme } from "@/components";
   </head>
   <body
     class:list={[
-      "bg-background text-foreground min-h-dvh p-4",
-      "flex flex-col justify-center gap-4",
-      "transition-colors duration-500",
-      "container mx-auto"
+      'bg-background text-foreground min-h-dvh p-4',
+      'flex flex-col justify-center gap-4',
+      'transition-colors duration-500',
+      'container mx-auto',
     ]}
   >
     <header class="text-end">
-      <Fork/>
-      <Theme class="animate-fade-in-down animate-delay-500"/>
+      <Fork />
+      <Theme class="animate-fade-in-down animate-delay-500" />
     </header>
 
     <main
       class:list={[
-        "grid md:grid-cols-3 lg:grid-cols-5",
-        "gap-6 lg:auto-rows-fr",
-        "min-h-0 lg:max-h-[calc(100dvh-8rem)]"
+        'grid md:grid-cols-3 lg:grid-cols-5',
+        'gap-6 lg:auto-rows-fr',
+        'min-h-0 lg:max-h-[calc(100dvh-8rem)]',
       ]}
     >
       <About
         class:list={[
-          "md:col-span-2 md:row-span-3 lg:col-span-2 lg:row-span-6",
-          "animate-fade-in-up"
+          'md:col-span-2 md:row-span-3 lg:col-span-2 lg:row-span-6',
+          'animate-fade-in-up',
         ]}
       />
       <Experience
         class:list={[
-          "col-start-auto md:col-start-3 md:row-span-5 lg:col-span-2 lg:row-span-2",
-          "animate-fade-in-up animate-delay-100"
+          'col-start-auto md:col-start-3 md:row-span-5 lg:col-span-2 lg:row-span-2',
+          'animate-fade-in-up animate-delay-100',
         ]}
       />
       <Availability
         class:list={[
-          "col-span-1 row-span-1 md:row-span-2",
-          "animate-fade-in-up animate-delay-200"
+          'col-span-1 row-span-1 md:row-span-2',
+          'animate-fade-in-up animate-delay-200',
         ]}
       />
       <Connect
         class:list={[
-          "md:col-span-1 md:row-span-2 lg:row-span-4",
-          "animate-fade-in-up animate-delay-300"
+          'md:col-span-1 md:row-span-2 lg:row-span-4',
+          'animate-fade-in-up animate-delay-300',
         ]}
       />
       <Projects
         class:list={[
-          "md:col-span-3 lg:col-span-2 lg:row-span-4",
-          "animate-fade-in-up animate-delay-400"
+          'md:col-span-3 lg:col-span-2 lg:row-span-4',
+          'animate-fade-in-up animate-delay-400',
         ]}
       />
     </main>
 
-    <footer class="text-center md:text-left animate-fade-in animate-delay-500">
-      <p class="text-muted text-sm leading-6 px-4">
+    <footer class="animate-fade-in animate-delay-500 text-center md:text-left">
+      <p class="text-muted px-4 text-sm leading-6">
         Built with ❤️ • © {new Date().getFullYear()} Mauro Viveros
-        <span class="float-right">Last Updated: {new Date().toLocaleDateString()}</span>
+        <span class="float-right"
+          >Last Updated: {new Date().toLocaleDateString()}</span
+        >
       </p>
     </footer>
   </body>

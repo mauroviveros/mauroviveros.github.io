@@ -14,15 +14,18 @@ const about = defineCollection({
 });
 
 const experience = defineCollection({
-  loader: glob({ base: './src/content/experience', pattern: '**/*.{yaml,yml}' }),
+  loader: glob({
+    base: './src/content/experience',
+    pattern: '**/*.{yaml,yml}',
+  }),
   schema: z.object({
-    about: reference("about"),
+    about: reference('about'),
     company: z.string(),
     role: z.string(),
     period: z.string(),
     url: z.url().optional(),
-    initials: z.string().optional()
-  })
+    initials: z.string().optional(),
+  }),
 });
 
 export const collections = { about, experience };

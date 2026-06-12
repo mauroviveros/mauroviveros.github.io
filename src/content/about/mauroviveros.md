@@ -1,18 +1,18 @@
 ---
-full_name: "Mauro Viveros"
-description: "WEB Developer | DEV-OPS"
-country: "Argentina"
-technologies: 
-  - "Astro"
-  - "React"
-  - "TypeScript"
-  - "Tailwind"
-  - "Vercel"
-  - "Cloudflare"
-  - "Supabase"
-  - "Vite"
-  - "NodeJS"
-  - "Angular"
+full_name: 'Mauro Viveros'
+description: 'WEB Developer | DEV-OPS'
+country: 'Argentina'
+technologies:
+  - 'Astro'
+  - 'React'
+  - 'TypeScript'
+  - 'Tailwind'
+  - 'Vercel'
+  - 'Cloudflare'
+  - 'Supabase'
+  - 'Vite'
+  - 'NodeJS'
+  - 'Angular'
 keywords:
   - Mauro Viveros
   - Mauro Daniel Viveros

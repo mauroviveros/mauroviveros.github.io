@@ -7,15 +7,15 @@ interface Action {
 }
 export const ACTIONS: Record<string, Action> = {
   homepage: {
-    icon: "lucide:external-link",
-    title: "View Live Demo",
+    icon: 'lucide:external-link',
+    title: 'View Live Demo',
   },
   repo_url: {
-    icon: "lucide:code",
-    title: "View Source Code",
+    icon: 'lucide:code',
+    title: 'View Source Code',
   },
   pkg_url: {
     icon: 'lucide:package',
     title: 'Github Package',
-  }
-}
+  },
+};
