@@ -1,5 +1,4 @@
 import rss from '@astrojs/rss';
-import { SITE } from '@config';
 import { getCollection } from 'astro:content';
 
 import { getRepos } from '@/lib/github';
@@ -7,6 +6,7 @@ import { getRepos } from '@/lib/github';
 export async function GET(context: { site: URL }) {
   const repos = await getRepos();
   const experience = await getCollection('experience');
+  const [about] = await getCollection('about');
 
   const items = [
     ...repos.map((repo) => ({
@@ -26,8 +26,8 @@ export async function GET(context: { site: URL }) {
   items.sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
 
   return rss({
-    title: `${SITE.fullName} | Portfolio`,
-    description: SITE.description,
+    title: `${about?.data.full_name} | Github Pages`,
+    description: about?.data.description ?? '',
     site: context.site.toString(),
     items,
   });

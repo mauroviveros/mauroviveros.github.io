@@ -1,21 +1,21 @@
-interface Network {
-  readonly name: string;
-  readonly url: string;
-  readonly icon: string;
-}
+import type { Config, Network, Site } from '@/types';
 
-interface Action {
-  icon: string;
-  title: string;
-}
-
-export const SITE = {
+export const SITE: Site = {
   url: 'https://mauroviveros.github.io',
   githubUser: 'mauroviveros',
-  fullName: 'Mauro Viveros',
-  description: 'WEB Developer | DEV-OPS',
-  country: 'Argentina',
-  author: 'Mauro Daniel Viveros',
+  keywords: [
+    'Mauro Viveros',
+    'Mauro Daniel Viveros',
+    'Developer',
+    'Web Developer',
+    'DevOps',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Node.js',
+    'Astro',
+    'GitHub Pages',
+  ],
 };
 
 export const NETWORKS: Network[] = [
@@ -46,35 +46,6 @@ export const NETWORKS: Network[] = [
   },
 ];
 
-export const CONFIG = {
-  titleSuffix: '| GitHub Pages',
-  keywords: [
-    'Mauro Viveros',
-    'Mauro Daniel Viveros',
-    'Developer',
-    'Web Developer',
-    'DevOps',
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'Node.js',
-    'Astro',
-    'GitHub Pages',
-  ],
+export const CONFIG: Config = {
   excludeTopics: ['github-course', 'github-pages', 'github-profile'],
-};
-
-export const ACTIONS: Record<string, Action> = {
-  homepage: {
-    icon: 'lucide:external-link',
-    title: 'View Live Demo',
-  },
-  repo_url: {
-    icon: 'lucide:code',
-    title: 'View Source Code',
-  },
-  pkg_url: {
-    icon: 'lucide:package',
-    title: 'Github Package',
-  },
 };

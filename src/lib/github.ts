@@ -41,7 +41,8 @@ export const getRepos = async () => {
     .filter(({ archived }) => !archived)
     .filter(({ fork }) => !fork)
     .filter(
-      ({ topics }) => !topics.some((t) => CONFIG.excludeTopics.includes(t)),
+      ({ topics }) =>
+        !topics.some((t) => (CONFIG.excludeTopics || []).includes(t)),
     )
     .map((repo) => {
       const pkg = packages.find((pkg) => pkg.name === repo.name);

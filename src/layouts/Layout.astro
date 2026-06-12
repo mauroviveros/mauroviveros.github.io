@@ -1,7 +1,10 @@
 ---
-import { SITE } from '@config';
+import { getCollection } from 'astro:content';
 
 import { Fork, MetaTags, Theme } from '@/components';
+import { CREATOR } from '@/constants';
+
+const [about] = await getCollection('about');
 ---
 
 <html lang="en">
@@ -34,13 +37,33 @@ import { Fork, MetaTags, Theme } from '@/components';
       <Theme class="animate-fade-in-down animate-delay-500" />
     </header>
 
+    <slot />
+
     <footer class="animate-fade-in animate-delay-500 text-center md:text-left">
       <p class="text-muted px-4 text-sm leading-6">
-        Built with ❤️ • © {new Date().getFullYear()}
-        {SITE.fullName}
-        <span class="float-right"
-          >Last Updated: {new Date().toLocaleDateString()}</span
-        >
+        <span>Built with ❤️ </span>
+        {
+          about?.data.full_name !== CREATOR.name && (
+            <span>
+              by
+              <a
+                href={CREATOR.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-foreground hover:underline"
+              >
+                {CREATOR.name}
+              </a>
+            </span>
+          )
+        }
+
+        • © {new Date().getFullYear()}
+        {about?.data.full_name}
+
+        <span class="float-right">
+          Last Updated: {new Date().toLocaleDateString()}
+        </span>
       </p>
     </footer>
   </body>
