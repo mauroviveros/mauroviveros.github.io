@@ -3,13 +3,10 @@ import type { HTMLAttributes } from 'astro/types';
 import { getCollection } from 'astro:content';
 
 import { Avatar, Card } from '@/components/ui';
-import { SITE } from '@/constants';
 export interface Props extends HTMLAttributes<'section'> {}
 const { class: className } = Astro.props;
 
-const EXPERIENCE = await getCollection('experience', ({ data: { about } }) => {
-  return about.id === SITE.ABOUT_ENTRY;
-});
+const EXPERIENCE = await getCollection('experience');
 ---
 
 <Card class:list={[className]}>

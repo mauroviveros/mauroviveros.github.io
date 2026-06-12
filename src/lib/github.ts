@@ -1,9 +1,11 @@
+import { CONFIG, SITE } from '@config';
 import { API_GITHUB_TOKEN } from 'astro:env/server';
 
-import { SITE } from '@/constants';
 import type { Package } from '@/types/package';
 import type { Repository } from '@/types/repository';
 import type { User } from '@/types/user';
+
+const GITHUB_API_URL = `https://api.github.com/users/${SITE.githubUser}`;
 
 const request: RequestInit = {
   headers: { Authorization: `Bearer ${API_GITHUB_TOKEN}` },
@@ -26,11 +28,11 @@ async function fetchJson<T>(url: string, fallback: T): Promise<T> {
 }
 
 export const getPackages = async () =>
-  fetchJson<Package[]>(`${SITE.GITHUB_API_URL}/packages?package_type=npm`, []);
+  fetchJson<Package[]>(`${GITHUB_API_URL}/packages?package_type=npm`, []);
 
 export const getRepos = async () => {
   const data = await fetchJson<Repository[]>(
-    `${SITE.GITHUB_API_URL}/repos?sort=updated`,
+    `${GITHUB_API_URL}/repos?sort=updated`,
     [],
   );
   const packages = await getPackages();
@@ -38,9 +40,9 @@ export const getRepos = async () => {
   return data
     .filter(({ archived }) => !archived)
     .filter(({ fork }) => !fork)
-    .filter(({ topics }) => !topics.includes('github-course'))
-    .filter(({ topics }) => !topics.includes('github-pages'))
-    .filter(({ topics }) => !topics.includes('github-profile'))
+    .filter(
+      ({ topics }) => !topics.some((t) => CONFIG.excludeTopics.includes(t)),
+    )
     .map((repo) => {
       const pkg = packages.find((pkg) => pkg.name === repo.name);
 
@@ -54,4 +56,4 @@ export const getRepos = async () => {
 };
 
 export const getUser = async () =>
-  fetchJson<Partial<User>>(`${SITE.GITHUB_API_URL}`, {});
+  fetchJson<Partial<User>>(`${GITHUB_API_URL}`, {});

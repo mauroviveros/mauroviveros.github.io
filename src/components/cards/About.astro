@@ -1,16 +1,15 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 import { Image } from 'astro:assets';
-import { getEntry, render } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { Icon } from 'astro-icon/components';
 
 import { Avatar, Badge, Card } from '@/components/ui';
-import { SITE } from '@/constants';
 import { getUser } from '@/lib/github';
 export interface Props extends HTMLAttributes<'section'> {}
 
 const { class: className } = Astro.props;
-const about = await getEntry('about', SITE.ABOUT_ENTRY);
+const [about] = await getCollection('about');
 const { avatar_url = '' } = await getUser();
 
 if (!about) return null;

@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
+import { SITE } from '@config';
 import { getCollection } from 'astro:content';
 
-import { SITE } from '@/constants';
 import { getRepos } from '@/lib/github';
 
 export async function GET(context: { site: URL }) {
@@ -26,8 +26,8 @@ export async function GET(context: { site: URL }) {
   items.sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
 
   return rss({
-    title: `${SITE.FULL_NAME} | Portfolio`,
-    description: SITE.DESCRIPTION,
+    title: `${SITE.fullName} | Portfolio`,
+    description: SITE.description,
     site: context.site.toString(),
     items,
   });

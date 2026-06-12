@@ -1,21 +1,21 @@
 ---
-import { getEntry } from 'astro:content';
+import { CONFIG, SITE } from '@config';
+import { getCollection } from 'astro:content';
 
-import { SITE } from '@/constants';
 import styles from '@/global.css?url';
-const about = await getEntry('about', SITE.ABOUT_ENTRY);
+const [about] = await getCollection('about');
 ---
 
 <head>
-  <title>{about?.data.full_name} | GitHub Pages</title>
+  <title>{about?.data.full_name} {CONFIG.titleSuffix}</title>
 
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
   <meta name="description" content={about?.data.description} />
-  <meta name="keywords" content={about?.data.keywords?.join(', ')} />
-  <meta name="author" content="Mauro Daniel Viveros" />
+  <meta name="keywords" content={CONFIG.keywords.join(', ')} />
+  <meta name="author" content={SITE.author} />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
 
