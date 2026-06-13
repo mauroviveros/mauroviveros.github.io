@@ -1,5 +1,3 @@
-import fs from 'node:fs';
-
 import { CONFIG, SITE } from '@config';
 import { API_GITHUB_TOKEN } from 'astro:env/server';
 
@@ -8,7 +6,6 @@ import type { Repository } from '@/types/repository';
 import type { User } from '@/types/user';
 
 const GITHUB_API_URL = `https://api.github.com/users/${SITE.githubUser}`;
-const AVATAR_LOCAL_PATH = 'public/avatar.png';
 
 const request: RequestInit = {
   headers: { Authorization: `Bearer ${API_GITHUB_TOKEN}` },
@@ -61,16 +58,3 @@ export const getRepos = async () => {
 
 export const getUser = async () =>
   fetchJson<Partial<User>>(`${GITHUB_API_URL}`, {});
-
-export const downloadAvatar = async (avatar_url: string): Promise<string> => {
-  try {
-    const res = await fetch(`${avatar_url}&s=128`);
-    if (res.ok) {
-      fs.writeFileSync(AVATAR_LOCAL_PATH, Buffer.from(await res.arrayBuffer()));
-      return '/avatar.png';
-    }
-  } catch {
-    console.warn('[github] failed to download avatar, using remote URL');
-  }
-  return avatar_url;
-};

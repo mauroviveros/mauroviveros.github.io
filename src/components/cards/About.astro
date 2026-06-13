@@ -5,13 +5,11 @@ import { getCollection, render } from 'astro:content';
 import { Icon } from 'astro-icon/components';
 
 import { Avatar, Badge, Card } from '@/components/ui';
-import { downloadAvatar, getUser } from '@/lib/github';
+
 export interface Props extends HTMLAttributes<'section'> {}
 
 const { class: className } = Astro.props;
 const [about] = await getCollection('about');
-const { avatar_url = '' } = await getUser();
-const avatar_src = avatar_url ? await downloadAvatar(avatar_url) : '';
 
 if (!about) return null;
 const { Content } = await render(about);
@@ -20,18 +18,14 @@ const { Content } = await render(about);
 <Card class:list={[className]}>
   <div class="flex items-center gap-4">
     <Avatar name={about.data.full_name} class="size-16">
-      {
-        avatar_src && (
-          <Image
-            src={avatar_src}
-            alt={about.data.full_name || 'Avatar'}
-            width={64}
-            height={64}
-            loading="eager"
-            fetchpriority="high"
-          />
-        )
-      }
+      <Image
+        src="/avatar.png"
+        alt={about.data.full_name || 'Avatar'}
+        width={64}
+        height={64}
+        loading="eager"
+        fetchpriority="high"
+      />
     </Avatar>
     <hgroup>
       <h2 class="text-xl font-bold">About me</h2>
