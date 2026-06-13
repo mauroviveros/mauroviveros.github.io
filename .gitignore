@@ -1,5 +1,7 @@
 # build output
 dist/
+# auto-generated avatar from GitHub API
+public/avatar.png
 # generated types
 .astro/
 
