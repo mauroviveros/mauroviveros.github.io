@@ -9,7 +9,6 @@ const about = defineCollection({
     description: z.string(),
     country: z.string(),
     technologies: z.array(z.string()).optional(),
-    keywords: z.array(z.string()).optional(),
   }),
 });
 

@@ -14,7 +14,7 @@ const [about] = await getCollection('about');
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
   <meta name="description" content={about?.data.description} />
-  {SITE.keywords && <meta name="keywords" content={SITE.keywords.join(', ')} />}
+  <meta name="keywords" content={SITE.keywords.join(', ')} />
   <meta name="author" content={about?.data.full_name} />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />

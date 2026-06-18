@@ -49,3 +49,5 @@ export const NETWORKS: Network[] = [
 export const CONFIG: Config = {
   excludeTopics: ['github-course', 'github-pages', 'github-profile'],
 };
+
+export const GITHUB_API_URL = `https://api.github.com/users/${SITE.githubUser}`;

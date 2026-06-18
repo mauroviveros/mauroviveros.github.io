@@ -13,18 +13,6 @@ technologies:
   - 'Vite'
   - 'NodeJS'
   - 'Angular'
-keywords:
-  - Mauro Viveros
-  - Mauro Daniel Viveros
-  - Developer
-  - Web Developer
-  - DevOps
-  - JavaScript
-  - TypeScript
-  - React
-  - Node.js
-  - Astro
-  - GitHub Pages
 ---
 
 Over 5 years creating 💡 functional, intuitive, and accessible web experiences. As a full stack

@@ -19,8 +19,8 @@ A quick look at who I am, my GitHub repos, work experience, and how to reach me.
 
 ## 📦 Requirements
 
-- [NodeJS][nodejs-link] _v22.19.0_
-- [PNPM][pnpm-link] _v10.15.1_
+- [NodeJS][nodejs-link] _v24.13.0_
+- [PNPM][pnpm-link] _v11.8.0_
 
 ## 🧞 Commands
 

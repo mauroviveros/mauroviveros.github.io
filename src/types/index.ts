@@ -10,9 +10,9 @@ export interface Action {
 }
 
 export interface Site {
-  url?: string;
+  url: string;
   githubUser: string;
-  keywords?: string[];
+  keywords: string[];
 }
 
 export interface Config {

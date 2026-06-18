@@ -2,16 +2,14 @@ import fs from 'node:fs';
 
 import type { AstroIntegration } from 'astro';
 
-import { SITE } from '../site.config';
-
-const GITHUB_API_URL = `https://api.github.com/users/${SITE.githubUser}`;
+import { GITHUB_API_URL } from '../site.config';
 const AVATAR_PATH = 'public/avatar.png';
 
 async function download(token: string) {
   try {
     const user = await fetch(GITHUB_API_URL, {
       headers: { Authorization: `Bearer ${token}` },
-    }).then(r => r.json());
+    }).then((r) => r.json());
     if (!user?.avatar_url) return;
     const res = await fetch(`${user.avatar_url}&s=128`);
     if (!res.ok) return;
