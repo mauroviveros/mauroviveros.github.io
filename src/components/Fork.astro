@@ -1,6 +1,7 @@
 ---
-import { SITE } from '@config';
-const FORK_URL = `https://github.com/${SITE.githubUser}/${SITE.githubUser}.github.io/fork`;
+import { CREATOR } from '@/constants';
+
+const FORK_URL = CREATOR.fork_url;
 ---
 
 <a
@@ -9,7 +10,7 @@ const FORK_URL = `https://github.com/${SITE.githubUser}/${SITE.githubUser}.githu
   rel="noopener noreferrer"
   title="Fork on GitHub"
   aria-label="Fork on GitHub"
-  class="github-corner fixed top-0 left-0"
+  class="github-corner absolute top-0 left-0"
 >
   <!-- https://github.com/tholman/github-corners -->
   <svg

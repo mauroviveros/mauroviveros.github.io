@@ -18,5 +18,5 @@ export const ACTIONS: Record<string, Action> = {
 export const CREATOR = {
   name: 'Mauro Viveros',
   url: 'https://mauroviveros.github.io',
-  fork: 'https://github.com/mauroviveros/mauroviveros.github.io/fork',
+  fork_url: 'https://github.com/mauroviveros/mauroviveros.github.io/fork',
 };
