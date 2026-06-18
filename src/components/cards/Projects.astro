@@ -16,7 +16,11 @@ const REPOS = await getRepos();
 <Card class:list={[className]}>
   <h2 class="font-semibold">Projects</h2>
 
-  <ul class="space-y-2 overflow-y-scroll pr-3 pl-1">
+  <ul
+    class="space-y-2 overflow-y-auto pr-3 pl-1"
+    role="region"
+    aria-label="Projects list"
+  >
     {
       REPOS.map(({ name, full_name, description, topics, urls }) => {
         const actions = Object.entries(ACTIONS).filter(([key]) => !!urls[key]);
@@ -55,7 +59,7 @@ const REPOS = await getRepos();
                       'size-8 rounded-full',
                     ]}
                   >
-                    <Icon name={icon} />
+                    <Icon name={icon} aria-hidden="true" />
                   </a>
                 ))}
               </div>

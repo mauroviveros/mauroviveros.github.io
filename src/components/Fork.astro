@@ -59,5 +59,11 @@ const FORK_URL = `https://github.com/${SITE.githubUser}/${SITE.githubUser}.githu
         animation: octocat-wave 560ms ease-in-out;
       }
     }
+    @media (prefers-reduced-motion: reduce) {
+      .github-corner:hover .octo-arm,
+      .github-corner .octo-arm {
+        animation: none !important;
+      }
+    }
   </style>
 </a>

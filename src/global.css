@@ -21,7 +21,7 @@ html[data-theme='dark'] {
   --color-border: oklch(0.797 0.0169 262.74);
   --color-card: oklch(0.2735 0.0179 251.92);
   --color-card-foreground: var(--color-foreground);
-  --color-muted: oklch(0.6625 0.0181 250.92);
+  --color-muted: oklch(0.78 0.0181 250.92);
 
   --color-primary: #a89af4;
   --color-primary-foreground: #151b23;
@@ -31,4 +31,24 @@ html[data-theme='dark'] {
   * {
     @apply border-border;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+:root {
+  color-scheme: light dark;
 }

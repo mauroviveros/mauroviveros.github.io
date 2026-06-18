@@ -7,6 +7,7 @@ import { Icon } from 'astro-icon/components';
   id="theme-toggle"
   title="Toggle Dark Mode"
   aria-label="Toggle dark mode"
+  aria-pressed="false"
   class:list={[
     'inline-flex cursor-pointer items-center justify-center',
     'rounded-full border text-sm font-medium shadow-xs',
@@ -18,11 +19,11 @@ import { Icon } from 'astro-icon/components';
 </button>
 
 <script is:inline>
-  document.querySelector('#theme-toggle')?.addEventListener('click', () => {
+  const btn = document.querySelector('#theme-toggle');
+  btn?.addEventListener('click', () => {
     const theme = document.documentElement.getAttribute('data-theme');
-    document.documentElement.setAttribute(
-      'data-theme',
-      theme === 'dark' ? 'light' : 'dark',
-    );
+    const next = theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    btn?.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
   });
 </script>

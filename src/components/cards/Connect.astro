@@ -14,14 +14,14 @@ const { class: className } = Astro.props;
   <ul class="space-y-3">
     {
       NETWORKS.map(({ name, url, icon }) => (
-        <li class="hover:text-primary transition-all duration-300 hover:translate-x-1 hover:underline">
+        <li>
           <a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2 text-sm"
+            class="hover:text-primary focus-visible:text-primary flex items-center gap-2 text-sm transition-all duration-300 hover:translate-x-1 hover:underline"
           >
-            <Icon name={icon} />
+            <Icon name={icon} aria-hidden="true" />
             {name}
           </a>
         </li>
