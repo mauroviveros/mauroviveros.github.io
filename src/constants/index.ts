@@ -11,7 +11,7 @@ export const ACTIONS: Record<string, Action> = {
   },
   pkg_url: {
     icon: 'lucide:package',
-    title: 'Github Package',
+    title: 'GitHub Package',
   },
 };
 

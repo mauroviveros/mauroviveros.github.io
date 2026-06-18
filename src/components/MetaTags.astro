@@ -6,33 +6,32 @@ import { getCollection } from 'astro:content';
 const [about] = await getCollection('about');
 ---
 
-<head>
-  <title>{about?.data.full_name} | GitHub Pages</title>
+<title>{about?.data.full_name} | GitHub Pages</title>
 
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="generator" content={Astro.generator} />
-  <meta name="description" content={about?.data.description} />
-  <meta name="keywords" content={SITE.keywords.join(', ')} />
-  <meta name="author" content={about?.data.full_name} />
-  <meta name="robots" content="index, follow" />
-  <meta name="googlebot" content="index, follow" />
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<meta name="generator" content={Astro.generator} />
+<meta name="description" content={about?.data.description} />
+<meta name="keywords" content={SITE.keywords.join(', ')} />
+<meta name="author" content={about?.data.full_name} />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
 
-  <link rel="canonical" href={Astro.site} />
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title={`${about?.data.full_name} | RSS Feed`}
-    href="/rss.xml"
-  />
+<link rel="canonical" href={Astro.site} />
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={`${about?.data.full_name} | RSS Feed`}
+  href="/rss.xml"
+/>
 
-  <link rel="preconnect" href="https://api.github.com" />
-
-  <link rel="alternate icon" type="image/png" href="/favicon.png" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-</head>
+<link rel="alternate icon" type="image/png" href="/favicon.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

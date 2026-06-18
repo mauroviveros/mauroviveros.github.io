@@ -30,8 +30,8 @@ export interface User {
   readonly public_gists: number;
   readonly followers: number;
   readonly following: number;
-  readonly created_at: Date;
-  readonly updated_at: Date;
+  readonly created_at: string;
+  readonly updated_at: string;
   readonly private_gists: number;
   readonly total_private_repos: number;
   readonly owned_private_repos: number;

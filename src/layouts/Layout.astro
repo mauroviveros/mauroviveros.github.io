@@ -32,6 +32,8 @@ const [about] = await getCollection('about');
       'container mx-auto',
     ]}
   >
+    <h1 class="sr-only">{about?.data.full_name} | GitHub Pages</h1>
+
     <header class="text-end">
       <Fork />
       <Theme class="animate-fade-in-down animate-delay-500" />
@@ -62,7 +64,9 @@ const [about] = await getCollection('about');
         {about?.data.full_name}
 
         <span class="float-right">
-          Last Updated: {new Date().toLocaleDateString()}
+          Last Updated: {
+            new Date().toLocaleDateString('en-US', { timeZone: 'UTC' })
+          }
         </span>
       </p>
     </footer>

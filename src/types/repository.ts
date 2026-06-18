@@ -45,9 +45,9 @@ export interface Repository {
   readonly labels_url: string;
   readonly releases_url: string;
   readonly deployments_url: string;
-  readonly created_at: Date;
-  readonly updated_at: Date;
-  readonly pushed_at: Date;
+  readonly created_at: string;
+  readonly updated_at: string;
+  readonly pushed_at: string;
   readonly git_url: string;
   readonly ssh_url: string;
   readonly clone_url: string;

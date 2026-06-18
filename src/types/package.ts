@@ -6,8 +6,8 @@ export interface Package {
   readonly version_count: number;
   readonly visibility: string;
   readonly url: string;
-  readonly created_at: Date;
-  readonly updated_at: Date;
+  readonly created_at: string;
+  readonly updated_at: string;
   readonly html_url: string;
 }
 

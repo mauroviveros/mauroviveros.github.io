@@ -10,7 +10,7 @@ const EXPERIENCE = await getCollection('experience');
 ---
 
 <Card class:list={[className]}>
-  <h3 class="font-semibold">Work Experience</h3>
+  <h2 class="font-semibold">Work Experience</h2>
 
   <ul class="space-y-3">
     {
@@ -21,7 +21,7 @@ const EXPERIENCE = await getCollection('experience');
           <div class="flex-1">
             <span class="text-sm font-semibold">{role}</span>
             <p class="text-muted text-xs">
-              {company}, • {period}
+              {company} • {period}
             </p>
           </div>
         </li>
