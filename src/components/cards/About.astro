@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
 import { Icon } from 'astro-icon/components';
 
+import avatarImg from '@/assets/avatar.png';
 import { Avatar, Badge, Card } from '@/components/ui';
 
 export interface Props extends HTMLAttributes<'section'> {}
@@ -19,7 +20,7 @@ const { Content } = await render(about);
   <div class="flex items-center gap-4">
     <Avatar name={about.data.full_name} class="size-16">
       <Image
-        src="/avatar.png"
+        src={avatarImg}
         alt={about.data.full_name || 'Avatar'}
         width={64}
         height={64}

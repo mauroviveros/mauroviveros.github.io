@@ -1,4 +1,6 @@
 // @ts-check
+import 'dotenv/config';
+
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, envField } from 'astro/config';
@@ -21,6 +23,7 @@ export default defineConfig({
       API_GITHUB_TOKEN: envField.string({
         context: 'server',
         access: 'secret',
+        optional: true,
       }),
     },
   },

@@ -14,6 +14,7 @@ export interface Site {
   githubUser: string;
   keywords: string[];
   ogImage?: string;
+  cv?: string;
 }
 
 export interface Config {

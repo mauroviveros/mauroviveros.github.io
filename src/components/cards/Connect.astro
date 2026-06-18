@@ -1,5 +1,5 @@
 ---
-import { NETWORKS } from '@config';
+import { NETWORKS, SITE } from '@config';
 import type { HTMLAttributes } from 'astro/types';
 import { Icon } from 'astro-icon/components';
 
@@ -28,4 +28,18 @@ const { class: className } = Astro.props;
       ))
     }
   </ul>
+
+  {
+    SITE.cv && (
+      <a
+        href={SITE.cv}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-primary focus-visible:text-primary mt-auto inline-flex items-center gap-2 text-sm transition-all duration-300 hover:translate-x-1"
+      >
+        <Icon name="lucide:file-down" aria-hidden="true" />
+        Download CV
+      </a>
+    )
+  }
 </Card>

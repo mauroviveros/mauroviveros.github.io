@@ -43,14 +43,25 @@ const jsonLdWebSite = {
 
     <script is:inline>
       (function () {
+        const STORAGE_KEY = 'theme';
+        const stored = localStorage.getItem(STORAGE_KEY);
         const query = window.matchMedia('(prefers-color-scheme: dark)');
-        const setTheme = () =>
-          document.documentElement.setAttribute(
-            'data-theme',
-            query.matches ? 'dark' : 'light',
-          );
-        query.addEventListener('change', setTheme);
-        setTheme();
+        const setTheme = (theme) =>
+          document.documentElement.setAttribute('data-theme', theme);
+        const syncPressed = () => {
+          const theme = document.documentElement.getAttribute('data-theme');
+          document
+            .querySelector('#theme-toggle')
+            ?.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+        };
+        setTheme(stored ?? (query.matches ? 'dark' : 'light'));
+        syncPressed();
+        query.addEventListener('change', (e) => {
+          if (!localStorage.getItem(STORAGE_KEY)) {
+            setTheme(e.matches ? 'dark' : 'light');
+            syncPressed();
+          }
+        });
       })();
     </script>
   </head>

@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import type { AstroIntegration } from 'astro';
 
 import { GITHUB_API_URL } from '../site.config';
-const AVATAR_PATH = 'public/avatar.png';
+const AVATAR_PATH = 'src/assets/avatar.png';
 
 async function download(token: string) {
   try {

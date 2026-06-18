@@ -14,14 +14,26 @@ const EXPERIENCE = await getCollection('experience');
 
   <ul class="space-y-3">
     {
-      EXPERIENCE.map(({ data: { role, company, period, initials } }) => (
+      EXPERIENCE.map(({ data: { role, company, period, initials, url } }) => (
         <li class="flex items-center gap-2">
           <Avatar initials={initials} name={company} class="size-10 text-xs" />
 
           <div class="flex-1">
             <span class="text-sm font-semibold">{role}</span>
             <p class="text-muted text-xs">
-              {company} • {period}
+              {url ? (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  {company}
+                </a>
+              ) : (
+                company
+              )}{' '}
+              • {period}
             </p>
           </div>
         </li>

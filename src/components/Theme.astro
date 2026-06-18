@@ -24,6 +24,7 @@ import { Icon } from 'astro-icon/components';
     const theme = document.documentElement.getAttribute('data-theme');
     const next = theme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
     btn?.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
   });
 </script>
