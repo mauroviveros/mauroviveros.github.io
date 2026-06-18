@@ -1,15 +1,45 @@
 ---
+import { NETWORKS } from '@config';
 import { getCollection } from 'astro:content';
 
 import { Fork, MetaTags, Theme } from '@/components';
 import { CREATOR } from '@/constants';
 
 const [about] = await getCollection('about');
+
+const jsonLdPerson = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: about?.data.full_name,
+  jobTitle: about?.data.description,
+  url: 'https://mauroviveros.github.io',
+  sameAs: NETWORKS.filter((n) => n.name !== 'Email').map((n) => n.url),
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: about?.data.country,
+  },
+};
+
+const jsonLdWebSite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: `${about?.data.full_name} | GitHub Pages`,
+  url: 'https://mauroviveros.github.io',
+};
 ---
 
 <html lang="en">
   <head>
     <MetaTags />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLdPerson)}
+    />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLdWebSite)}
+    />
 
     <script is:inline>
       (function () {

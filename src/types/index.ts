@@ -13,6 +13,7 @@ export interface Site {
   url: string;
   githubUser: string;
   keywords: string[];
+  ogImage?: string;
 }
 
 export interface Config {

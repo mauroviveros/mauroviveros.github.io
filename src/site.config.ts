@@ -3,6 +3,7 @@ import type { Config, Network, Site } from '@/types';
 export const SITE: Site = {
   url: 'https://mauroviveros.github.io',
   githubUser: 'mauroviveros',
+  ogImage: '/og.png',
   keywords: [
     'Mauro Viveros',
     'Mauro Daniel Viveros',
