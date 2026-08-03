@@ -23,23 +23,23 @@
     "astro": "^6.4.8",
     "astro-icon": "^1.1.5",
     "sharp": "^0.35.3",
-    "tailwind-animations": "^1.0.1",
+    "tailwind-animations": "^1.0.2",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@iconify-json/lucide": "^1.2.117",
-    "@typescript-eslint/parser": "^8.63.0",
+    "@astrojs/check": "^0.9.10",
+    "@iconify-json/lucide": "^1.2.120",
+    "@typescript-eslint/parser": "^8.65.0",
     "dotenv": "^17.4.2",
-    "eslint": "^10.7.0",
+    "eslint": "^10.8.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-simple-import-sort": "^13.0.0",
     "eslint-plugin-unused-imports": "^4.4.1",
-    "prettier": "^3.9.5",
+    "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.8.1",
-    "typescript-eslint": "^8.63.0"
+    "typescript-eslint": "^8.65.0"
   }
 }
